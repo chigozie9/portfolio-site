@@ -1,0 +1,231 @@
+---
+title: "Loan Approval Prediction"
+format: html
+execute:
+    echo: false
+---
+
+
+```{python}
+#| echo: false
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+df = pd.read_csv("data/loan_data.csv")  # adjust path to your dataset
+```
+
+# 🏦 Loan Approval Prediction Project
+
+## 📌 Problem Statement
+
+Can we predict whether a loan application will be approved based on applicant information?
+This project simulates how financial institutions can use data science to improve decision-making in the lending process.
+
+---
+
+## 📊 Dataset Overview
+
+The dataset includes information such as:
+- Applicant income
+- Education level
+- Employment status
+- Loan amount
+- Credit history
+- Marital status
+- Property area
+
+After preprocessing, we were left with a clean dataset ready for modeling.
+
+---
+
+## 🔍 Exploratory Data Analysis (EDA)
+
+```{python}
+plt.figure(figsize=(8,5))
+sns.histplot(df['person_income'], kde=True, bins=30)
+plt.title("Applicant Income Distribution")
+plt.xlabel("Income")
+plt.ylabel("Frequency")
+plt.tight_layout()
+plt.show()
+```
+### 🧭 Loan Approval Rate by Loan Purpose
+
+```{python}
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Group by loan_intent and calculate mean approval rate
+intent_approval = df.groupby('loan_intent')['loan_status'].mean().reset_index()
+
+plt.figure(figsize=(8, 5))
+sns.barplot(data=intent_approval.sort_values("loan_status", ascending=False),x='loan_intent', y='loan_status')
+
+plt.title("Loan Approval Rate by Loan Purpose")
+plt.xlabel("Loan Purpose")
+plt.ylabel("Approval Rate")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+```
+### 💵 Income Distribution by Loan Approval
+
+```{python}
+plt.figure(figsize=(8, 5))
+sns.boxplot(data=df, x='loan_status', y='person_income')
+plt.yscale('log')  # Log scale because income is skewed
+plt.title("Applicant Income by Loan Approval Status")
+plt.xlabel("Loan Approved (1 = Yes, 0 = No)")
+plt.ylabel("Income (Log Scale)")
+plt.tight_layout()
+plt.show()
+```
+
+**Key insights discovered:**
+
+- **Debt consolidation, medical, and home improvement loans** had the highest approval rates.
+- **Venture loans** had the lowest approval rate, indicating higher perceived risk.
+- **Approved applicants tended to have slightly lower median incomes**, although the income range overlaps heavily.
+- The income distribution is **heavily right-skewed**, requiring log scaling for meaningful visualization.
+
+_Visuals like histograms, boxplots, and bar charts were used to uncover these patterns._
+
+
+---
+
+## 🧠 Model Building
+
+### 📐 Logistic Regression Model
+
+```{python}
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import accuracy_score, precision_score, recall_score
+
+# 1. Define features and target
+X = df.drop(columns=['loan_status', 'id'])
+y = df['loan_status']
+
+# 2. Encode categorical features
+X = pd.get_dummies(X, drop_first=True)
+
+# 3. Scale features
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# 4. Train/test split
+X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.3, random_state=42)
+
+# 5. Train model
+log_model = LogisticRegression(max_iter=1000)
+log_model.fit(X_train, y_train)
+
+# 6. Predict
+y_pred_log = log_model.predict(X_test)
+
+# 7. Evaluate
+log_accuracy = accuracy_score(y_test, y_pred_log)
+log_precision = precision_score(y_test, y_pred_log)
+log_recall = recall_score(y_test, y_pred_log)
+
+print(f"Accuracy: {log_accuracy:.2f}")
+print(f"Precision: {log_precision:.2f}")
+print(f"Recall: {log_recall:.2f}")
+```
+### 🔢 Confusion Matrix – Logistic Regression
+
+```{python}
+from sklearn.metrics import ConfusionMatrixDisplay
+
+ConfusionMatrixDisplay.from_estimator(log_model, X_test, y_test,
+                                      display_labels=["Rejected", "Approved"],
+                                      cmap="Blues",
+                                      colorbar=False)
+plt.title("Logistic Regression – Confusion Matrix")
+plt.tight_layout()
+plt.show()
+```
+
+
+### 🌲 Random Forest Classifier
+
+```{python}
+from sklearn.ensemble import RandomForestClassifier
+
+# Train model
+rf_model = RandomForestClassifier(n_estimators=100, random_state=42)
+rf_model.fit(X_train, y_train)
+
+# Predict
+y_pred_rf = rf_model.predict(X_test)
+
+# Evaluate
+rf_accuracy = accuracy_score(y_test, y_pred_rf)
+rf_precision = precision_score(y_test, y_pred_rf)
+rf_recall = recall_score(y_test, y_pred_rf)
+
+print(f"Accuracy: {rf_accuracy:.2f}")
+print(f"Precision: {rf_precision:.2f}")
+print(f"Recall: {rf_recall:.2f}")
+
+
+
+ConfusionMatrixDisplay.from_estimator(rf_model, X_test, y_test,
+                                      display_labels=["Rejected", "Approved"],
+                                      cmap="Greens",
+                                      colorbar=False)
+plt.title("Random Forest – Confusion Matrix")
+plt.tight_layout()
+plt.show()
+
+import pandas as pd
+
+# Feature importance chart
+feature_importance = pd.Series(rf_model.feature_importances_, index=X.columns)
+top_features = feature_importance.sort_values(ascending=False).head(10)
+
+top_features.plot(kind='barh', figsize=(8, 5))
+plt.title("Top 10 Important Features – Random Forest")
+plt.xlabel("Feature Importance Score")
+plt.gca().invert_yaxis()
+plt.tight_layout()
+plt.show()
+```
+
+We tested several models:
+- **Logistic Regression**
+- **Random Forest**
+- **Support Vector Machine (SVM)**
+
+After tuning, the **Random Forest** model delivered the best overall performance.
+
+**Final Metrics (Random Forest):**
+- Accuracy: **0.95**
+- Precision: **0.92**
+- Recall: **0.72**
+
+Feature importance analysis highlighted **loan_percent_income**, **loan_int_rate**, and **person_income** as the top predictors.
+
+---
+
+## ✅ Results & Takeaways
+
+- The **Random Forest model** achieved the best performance with strong accuracy and balanced metrics.
+- **Loan-to-income ratio**, **interest rate**, and **income** were the top predictors, according to feature importance.
+- **Precision (92%)** suggests the model reliably predicts approved loans, and **recall (72%)** shows good coverage of actual approvals.
+- To improve the model:
+  - Consider using **external credit data** or **employment verification APIs**
+  - Explore **class imbalance handling** (e.g., SMOTE, weighted loss)
+  - Experiment with **gradient boosting** models for potential gains
+
+
+## 🔗 Project Links
+
+- 📂 [View the full notebook on GitHub](https://github.com/chigozier9/loan-approval-project)
+- 📁 Dataset Source: [Kaggle Loan Prediction Dataset](https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset)
+
+"""
+
+

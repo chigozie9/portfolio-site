@@ -1,0 +1,15 @@
+---
+title: "Public School Security Dashboard"
+format: html
+---
+
+# 🏫 Public School Dashboard
+
+An interactive dashboard using Power BI/Tableau to explore school security incidents across districts.
+
+## Insights:
+- Year-over-year trend analysis
+- Geographic distribution
+- Correlations with funding and student population
+
+<iframe width="100%" height="500" src="https://public.tableau.com/views/YourDashboardLink" frameborder="0" allowfullscreen></iframe>

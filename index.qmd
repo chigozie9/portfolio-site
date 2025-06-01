@@ -1,0 +1,27 @@
+---
+title: "Welcome"
+format: html
+---
+
+# 👋 Welcome
+
+Hi, I'm **Andrew Nwalie**, a data science and software engineering enthusiast focused on building intelligent, scalable solutions.
+This is my personal portfolio where I showcase select projects in machine learning, data visualization, analytics, and backend development.
+
+Feel free to explore my work and connect with me!
+
+## 👨‍💻 About Me
+
+I'm a recent Master's student in Data Science with 3 years of experience in Python automation.
+I'm passionate about solving real-world problems using data and software.
+I enjoy building end-to-end solutions — from ETL pipelines to machine learning models to dashboards.
+
+Open to opportunities in data science, analytics, or software engineering — especially roles where I can apply both my analytical and coding skills.
+
+
+## 🛠 Skills & Tools
+
+- **Languages**: Python, SQL, R, JavaScript
+- **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
+- **Tools**: Jupyter, Git, Power BI, Tableau, Docker, Selenium
+- **Tech**: REST APIs, GitHub Actions, ETL, Web Scraping, BigQuery
