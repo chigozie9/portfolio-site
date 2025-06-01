@@ -17,6 +17,7 @@ website:
 
 format:
   html:
+    include-in-header: custom-fonts.html
     theme: default
     css: "styles/landing.css"
     toc: false
