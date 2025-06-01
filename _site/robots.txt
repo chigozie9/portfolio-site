@@ -1,1 +1,1 @@
-Sitemap: landing.qmd/sitemap.xml
+Sitemap: https://chigozie9.github.io/loan-approval-project/sitemap.xml

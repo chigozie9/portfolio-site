@@ -13,11 +13,11 @@ website:
         href: "#projects-section"
       - text: "Contact"
         href: "contact.qmd"
-  search: false  # Disables the search feature
+  search: false # Disables the search feature
 
 format:
   html:
-    include-in-header: custom-fonts.html
     theme: default
     css: "styles/landing.css"
     toc: false
+    header-includes: custom-fonts.html

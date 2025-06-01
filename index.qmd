@@ -3,8 +3,7 @@ title: "Andrew Nwalie"
 format: html
 page-layout: full
 css: styles/landing.css
-include-in-header: |
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+include-in-header: custom-fonts.html
 ---
 
 :::{#header}
