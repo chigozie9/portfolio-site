@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contact – Andrew | Data Portfolio</title>
+<title>Netflix User Segmentation – Andrew | Data Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./contact.html" aria-current="page"> 
+    <a class="nav-link" href="./contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contact</h1>
+<h1 class="title">Netflix User Segmentation</h1>
 </div>
 
 
@@ -118,34 +118,78 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="get-in-touch" class="level1">
-<h1>📫 Get in Touch</h1>
-<p>I’d love to connect — whether you’re hiring, collaborating, or just saying hi!</p>
+<section id="netflix-user-segmentation-with-k-means-clustering" class="level1">
+<h1>🎬 Netflix User Segmentation with K-Means Clustering</h1>
+<p>This project explores how we can segment Netflix-style users based on their viewing and rating behavior. We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset — a popular proxy for streaming behavior.</p>
 <hr>
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">🔗 Links</h2>
+<section id="tools-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="tools-techniques">🧠 Tools &amp; Techniques</h2>
 <ul>
-<li>🌐 <strong>GitHub</strong>: <a href="https://github.com/chigozie9"><span class="citation" data-cites="chigozie9">@chigozie9</span></a></li>
-<li>💼 <strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/andrew-nwalie-917640185/">Andrew Nwalie</a></li>
-<li>✉️ <strong>Email</strong>: <a href="mailto:andrew1nwalie@gmail.com">andrew1nwalie@gmail.com</a></li>
+<li><strong>Pandas</strong> for data wrangling</li>
+<li><strong>Scikit-learn</strong> for K-Means clustering &amp; PCA</li>
+<li><strong>Matplotlib</strong> for visualizations</li>
+<li><strong>StandardScaler</strong> for normalization</li>
 </ul>
 <hr>
 </section>
-<section id="open-to" class="level2">
-<h2 class="anchored" data-anchor-id="open-to">💬 Open to:</h2>
-<ul>
-<li>Freelance &amp; contract work (data, dashboards, automation)</li>
-<li>Full-time roles in data analytics or machine learning</li>
-</ul>
+<section id="pca-projection-of-user-clusters" class="level2">
+<h2 class="anchored" data-anchor-id="pca-projection-of-user-clusters">🧩 PCA Projection of User Clusters</h2>
+<p>We used K-Means clustering on normalized user behavior (e.g., avg rating, rating frequency, rating consistency). PCA was applied to reduce dimensions and visualize user segments.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/netflix_user_clusters.png" class="img-fluid figure-img"></p>
+<figcaption>User Clusters</figcaption>
+</figure>
+</div>
 <hr>
-<pre><code>🌟</code></pre>
-</section></section></main></div>
+</section>
+<section id="cluster-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="cluster-distribution">📊 Cluster Distribution</h2>
+<p>Here’s the number of users that fell into each cluster group:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/netflix_cluster_sizes.png" class="img-fluid figure-img"></p>
+<figcaption>Cluster Sizes</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="average-rating-by-cluster" class="level2">
+<h2 class="anchored" data-anchor-id="average-rating-by-cluster">⭐ Average Rating by Cluster</h2>
+<p>Some clusters tend to rate movies more positively than others. This view reveals behavioral differences between user types.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/netflix_cluster_avg_rating.png" class="img-fluid figure-img"></p>
+<figcaption>Average Rating by Cluster</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="insights" class="level2">
+<h2 class="anchored" data-anchor-id="insights">🔍 Insights</h2>
+<ul>
+<li><strong>Cluster 1</strong> contains high-frequency raters with consistently high ratings — likely loyal or engaged users</li>
+<li><strong>Cluster 2</strong> includes viewers with low average ratings — possibly critics or picky watchers</li>
+<li><strong>Cluster 3</strong> has moderate activity and average rating variance — casual or balanced users</li>
+<li><strong>Cluster 0</strong> users are active but inconsistent — might reflect binge-watchers or exploratory viewers</li>
+</ul>
+<p>These segments can help streaming platforms personalize recommendations, manage churn risk, or optimize engagement strategies.</p>
+<hr>
+</section>
+<section id="notebook" class="level2">
+<h2 class="anchored" data-anchor-id="notebook">💻 Notebook</h2>
+<p>Code used for clustering and visualizations: <a href="data/netflix_clustering.py"><code>netflix_clustering.py</code></a></p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">🧾 Summary</h2>
+<p>This project demonstrates how clustering can uncover meaningful user segments from real viewing data. Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention.</p>
 
 
+</section>
+</section>
 
-
-
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -545,7 +589,7 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 

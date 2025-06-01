@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Contact – Andrew | Data Portfolio</title>
+<title>Restaurant Reviews Dashboard – Andrew | Data Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./contact.html" aria-current="page"> 
+    <a class="nav-link" href="./contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
 </ul>
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Contact</h1>
+<h1 class="title">Restaurant Reviews Dashboard</h1>
 </div>
 
 
@@ -118,34 +118,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="get-in-touch" class="level1">
-<h1>📫 Get in Touch</h1>
-<p>I’d love to connect — whether you’re hiring, collaborating, or just saying hi!</p>
+<section id="restaurant-review-trends-over-time" class="level1">
+<h1>📊 Restaurant Review Trends Over Time</h1>
+<p>This project explores how customer sentiment and review volume evolved over time for various restaurants. We used natural language processing (NLP) to extract sentiment from review text and visualized how it correlated with rating trends.</p>
 <hr>
-<section id="links" class="level2">
-<h2 class="anchored" data-anchor-id="links">🔗 Links</h2>
+<section id="tools-techniques" class="level2">
+<h2 class="anchored" data-anchor-id="tools-techniques">🧠 Tools &amp; Techniques</h2>
 <ul>
-<li>🌐 <strong>GitHub</strong>: <a href="https://github.com/chigozie9"><span class="citation" data-cites="chigozie9">@chigozie9</span></a></li>
-<li>💼 <strong>LinkedIn</strong>: <a href="https://www.linkedin.com/in/andrew-nwalie-917640185/">Andrew Nwalie</a></li>
-<li>✉️ <strong>Email</strong>: <a href="mailto:andrew1nwalie@gmail.com">andrew1nwalie@gmail.com</a></li>
+<li><strong>Pandas</strong> for data cleaning</li>
+<li><strong>TextBlob</strong> for sentiment scoring</li>
+<li><strong>Matplotlib</strong> for visualizations</li>
+<li><strong>WordCloud</strong> for text frequency visualization</li>
+<li><strong>Streamlit</strong> (optional) for interactive dashboard</li>
 </ul>
 <hr>
 </section>
-<section id="open-to" class="level2">
-<h2 class="anchored" data-anchor-id="open-to">💬 Open to:</h2>
-<ul>
-<li>Freelance &amp; contract work (data, dashboards, automation)</li>
-<li>Full-time roles in data analytics or machine learning</li>
-</ul>
+<section id="timeline-of-reviews" class="level2">
+<h2 class="anchored" data-anchor-id="timeline-of-reviews">📈 Timeline of Reviews</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/review_trends.png" class="img-fluid figure-img"></p>
+<figcaption>Rating and Sentiment Over Time</figcaption>
+</figure>
+</div>
 <hr>
-<pre><code>🌟</code></pre>
-</section></section></main></div>
+</section>
+<section id="sentiment-by-restaurant" class="level2">
+<h2 class="anchored" data-anchor-id="sentiment-by-restaurant">🔍 Sentiment by Restaurant</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/sentiment_chart.png" class="img-fluid figure-img"></p>
+<figcaption>Number of Reviews Over Time</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="most-frequent-words-in-reviews" class="level2">
+<h2 class="anchored" data-anchor-id="most-frequent-words-in-reviews">☁️ Most Frequent Words in Reviews</h2>
+<p>We visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/review_wordcloud.png" class="img-fluid figure-img"></p>
+<figcaption>Most Frequent Words</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="notebook" class="level2">
+<h2 class="anchored" data-anchor-id="notebook">📓 Notebook</h2>
+<p>Check out the code in the notebook: <a href="data/restaurant_eda.py"><code>restaurant_eda.py</code></a></p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">🧾 Summary</h2>
+<p>This project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries.</p>
 
 
+</section>
+</section>
 
-
-
- <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -545,7 +577,7 @@ ul.task-list li input[type="checkbox"] {
     }
   });
   </script>
- <!-- /content -->
+</div> <!-- /content -->
 
 
 

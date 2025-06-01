@@ -67,27 +67,237 @@
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "📬 Get in Touch\n\nGitHub: yourusername\nLinkedIn: yourlinkedin\nEmail: your.email@example.com"
+    "text": "I’d love to connect — whether you’re hiring, collaborating, or just saying hi!\n\n\n\n\n🌐 GitHub: @chigozie9\n💼 LinkedIn: Andrew Nwalie\n✉️ Email: andrew1nwalie@gmail.com\n\n\n\n\n\n\nFreelance & contract work (data, dashboards, automation)\nFull-time roles in data analytics or machine learning\n\n\n🌟"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Welcome",
+    "title": "Andrew Nwalie",
     "section": "",
-    "text": "Hi, I’m Andrew Nwalie, a data science and software engineering enthusiast focused on building intelligent, scalable solutions. This is my personal portfolio where I showcase select projects in machine learning, data visualization, analytics, and backend development.\nFeel free to explore my work and connect with me!\n\n\nI’m a recent Master’s student in Data Science with 3 years of experience in Python automation. I’m passionate about solving real-world problems using data and software. I enjoy building end-to-end solutions — from ETL pipelines to machine learning models to dashboards.\nOpen to opportunities in data science, analytics, or software engineering — especially roles where I can apply both my analytical and coding skills.\n\n\n\n\nLanguages: Python, SQL, R, JavaScript\nLibraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn\nTools: Jupyter, Git, Power BI, Tableau, Docker, Selenium\nTech: REST APIs, GitHub Actions, ETL, Web Scraping, BigQuery"
+    "text": "Hello, I’m Andrew.\n\n\nI’m a software engineer and data scientist.\n\nView my work ↓\n\n\n\n\n\n\n\nFeatured Projects\n\n\n\n\nLoan Approval Model\n\n\nBuilt a machine learning model to predict loan approvals.\n\n\nTech: Python, XGBoost, Logistic Regression\n\n\n\n\nNetflix User Segmentation\n\n\nUnsupervised clustering of Netflix-style users based on their movie rating behavior.\n\n\nTech: Python, K-Means, PCA, Scikit-learn\n\n\n\n\nRestaurant Review Trends\n\n\nAnalyzed sentiment and trends in restaurant reviews.\n\n\nTech: Python, NLP, TextBlob, WordCloud\n\n\n\n\n\n\nGitHub | Email | LinkedIn\n\n© 2025 Andrew Nwalie | Journey Beyond Data"
   },
   {
     "objectID": "index.html#about-me",
     "href": "index.html#about-me",
-    "title": "Welcome",
-    "section": "",
-    "text": "I’m a recent Master’s student in Data Science with 3 years of experience in Python automation. I’m passionate about solving real-world problems using data and software. I enjoy building end-to-end solutions — from ETL pipelines to machine learning models to dashboards.\nOpen to opportunities in data science, analytics, or software engineering — especially roles where I can apply both my analytical and coding skills."
+    "title": "Andrew Nwalie",
+    "section": "About Me",
+    "text": "About Me\nI am a software engineer with 5 years of experience in automation engineering, now transitioning into data science after earning my master’s in data science. My background in developing automated systems has honed my skills in Python, Java, and software design, which I now apply to data-driven problem-solving. I specialize in leveraging machine learning, data visualization, and tools like Python, R, and Power BI to build impactful models and dashboards. I’m passionate about transforming complex datasets into actionable insights and eager to contribute my technical expertise to innovative data science projects."
   },
   {
     "objectID": "index.html#skills-tools",
     "href": "index.html#skills-tools",
-    "title": "Welcome",
+    "title": "Andrew | Data Portfolio",
     "section": "",
     "text": "Languages: Python, SQL, R, JavaScript\nLibraries: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn\nTools: Jupyter, Git, Power BI, Tableau, Docker, Selenium\nTech: REST APIs, GitHub Actions, ETL, Web Scraping, BigQuery"
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Andrew Nwalie | Data Portfolio",
+    "section": "",
+    "text": "📊 Loan Approval Model Predicting loan approvals based on applicant data using logistic regression and random forest. View Project ›\n\n\n🏫 Public School Dashboard Interactive visualization of school performance data for district-level insights. View Project ›\n\n\n🍽️ Restaurant Review Trends Timeline analysis of restaurant reviews using sentiment analysis and rating trends. View Project ›"
+  },
+  {
+    "objectID": "index.html#lets-connect",
+    "href": "index.html#lets-connect",
+    "title": "Andrew Nwalie | Data Portfolio",
+    "section": "",
+    "text": "Feel free to connect with me on LinkedIn or reach out via email."
+  },
+  {
+    "objectID": "landing.html",
+    "href": "landing.html",
+    "title": "Andrew Nwalie",
+    "section": "",
+    "text": "Home | Loan Approval Model | Public School Dashboard | Restaurant Review Trends | Contact\n\n\n\n\n\nANDREW | DATA PORTFOLIO\n\n\nCrafting clean, data-driven experiences.\n\nExplore\n\n\n\n\nCrafting clean, data-driven experiences.\n\n\n\n\nLoan Approval Model\n\n\nInsight\n\n\nBuilt a machine learning model to predict loan approvals based on financial data.\n\n\nTech\n\n\nPython, XGBoost, Logistic Regression\n\n\n\n\nPublic School Dashboard\n\n\nInsight\n\n\nInteractive dashboard that visualizes funding disparities and performance in schools.\n\n\nTech\n\n\nPower BI, Python, Pandas\n\n\n\n\nRestaurant Review Trends\n\n\nInsight\n\n\nAnalyzed sentiment and trends in restaurant reviews to uncover customer preferences.\n\n\nTech\n\n\nPython, NLP, TextBlob, WordCloud\n\n\n\n\n\n\nGitHub | Email | LinkedIn\n\n© 2025 Andrew Nwalie | Journey Beyond Data"
+  },
+  {
+    "objectID": "restaurant-reviews.html",
+    "href": "restaurant-reviews.html",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "This project explores how customer sentiment and review volume evolved over time for various restaurants. We used natural language processing (NLP) to extract sentiment from review text and visualized how it correlated with rating trends.\n\n\n\n\nPandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard\n\n\n\n\n\n\n\n\nRating and Sentiment Over Time\n\n\n\n\n\n\n\n\n\nNumber of Reviews Over Time\n\n\n\n\n\n\nWe visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words\n\n\n\n\n\n\nCheck out the code in the notebook: restaurant_eda.py\n\n\n\n\nThis project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
+  },
+  {
+    "objectID": "restaurant-reviews.html#tools-techniques",
+    "href": "restaurant-reviews.html#tools-techniques",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "Pandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard"
+  },
+  {
+    "objectID": "restaurant-reviews.html#timeline-of-reviews",
+    "href": "restaurant-reviews.html#timeline-of-reviews",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "Rating and Sentiment Over Time"
+  },
+  {
+    "objectID": "restaurant-reviews.html#sentiment-by-restaurant",
+    "href": "restaurant-reviews.html#sentiment-by-restaurant",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "Number of Reviews Over Time"
+  },
+  {
+    "objectID": "restaurant-reviews.html#notebook",
+    "href": "restaurant-reviews.html#notebook",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "Check out the code in the notebook: restaurant_eda.py"
+  },
+  {
+    "objectID": "restaurant-reviews.html#summary",
+    "href": "restaurant-reviews.html#summary",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "This project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
+  },
+  {
+    "objectID": "landing.html#featured-projects",
+    "href": "landing.html#featured-projects",
+    "title": "Home",
+    "section": "Featured Projects",
+    "text": "Featured Projects\n\n[Project 1 Name] - [Brief description] GitHub\n[Project 2 Name] - [Brief description] Live\n[Project 3 Name] - [Brief description] Code"
+  },
+  {
+    "objectID": "landing.html#project-1-name",
+    "href": "landing.html#project-1-name",
+    "title": "Data Science Portfolio",
+    "section": "[Project 1 Name]",
+    "text": "[Project 1 Name]\n\nProblem Statement\n[Describe the problem, e.g., “Can we predict loan approval based on applicant information? This project simulates how financial institutions can use data science to improve lending decisions.”]\n\n\nDataset Overview\n[The dataset includes information such as: - Applicant income - Education level - Employment status - Loan amount - Credit history - Marital status - Property area. After preprocessing, we were left with a clean dataset ready for modeling.]\n\n\nExploratory Data Analysis (EDA)\n[Brief description, e.g., “Visualizing the distribution of applicant income to identify patterns.”]\n\n[Chart placeholder - see CSS for styling]"
+  },
+  {
+    "objectID": "landing.html#project-2-name",
+    "href": "landing.html#project-2-name",
+    "title": "Data Science Portfolio",
+    "section": "[Project 2 Name]",
+    "text": "[Project 2 Name]\n\nProblem Statement\n[Describe another project, e.g., “Predicting customer churn using behavioral data.”]\n\n\nDataset Overview\n[Details, e.g., “Includes customer age, usage patterns, and subscription status.”]\n\n\nExploratory Data Analysis (EDA)\n[Description, e.g., “Analyzing usage patterns over time.”]"
+  },
+  {
+    "objectID": "landing.html#project-nebula",
+    "href": "landing.html#project-nebula",
+    "title": "Data Odyssey",
+    "section": "Project Nebula",
+    "text": "Project Nebula\n\nInsight\nUnveiling cosmic patterns in data streams. ### Tech Python, TensorFlow, AstroML"
+  },
+  {
+    "objectID": "landing.html#quantum-insights",
+    "href": "landing.html#quantum-insights",
+    "title": "Data Odyssey",
+    "section": "Quantum Insights",
+    "text": "Quantum Insights\n\nInsight\nDecoding quantum data for predictive models. ### Tech R, PyTorch, Quantum Computing"
+  },
+  {
+    "objectID": "landing.html#galactic-analytics",
+    "href": "landing.html#galactic-analytics",
+    "title": "Data Odyssey",
+    "section": "Galactic Analytics",
+    "text": "Galactic Analytics\n\nInsight\nMapping galaxy-scale datasets for discovery. ### Tech Julia, Pandas, Dask"
+  },
+  {
+    "objectID": "landing.html#stellar-prediction",
+    "href": "landing.html#stellar-prediction",
+    "title": "Data Odyssey",
+    "section": "Stellar Prediction",
+    "text": "Stellar Prediction\n\nInsight\nPredicting stellar classifications using spectral data. ### Tech Python, Scikit-learn, AstroPy ### Visualization Analyzing the distribution of star types in the dataset.\n{ “type”: “bar”, “data”: { “labels”: [“Dwarf”, “Giant”, “Supergiant”, “White Dwarf”], “datasets”: [{ “label”: “Count”, “data”: [1200, 450, 150, 300], “backgroundColor”: “#00ffcc”, “borderColor”: “#00ccaa”, “borderWidth”: 1 }] }, “options”: { “scales”: { “y”: { “beginAtZero”: true, “title”: { “display”: true, “text”: “Count” } }, “x”: { “title”: { “display”: true, “text”: “Star Type” } } }, “plugins”: { “title”: { “display”: true, “text”: “Star Type Distribution” } } } }"
+  },
+  {
+    "objectID": "landing.html#loan-approval-model",
+    "href": "landing.html#loan-approval-model",
+    "title": "Chigozie Nwalie Portfolio",
+    "section": "Loan Approval Model",
+    "text": "Loan Approval Model\n\nInsight\nBuilt a machine learning model to predict loan approvals based on financial data. ### Tech Python, XGBoost, Logistic Regression"
+  },
+  {
+    "objectID": "landing.html#public-school-dashboard",
+    "href": "landing.html#public-school-dashboard",
+    "title": "Chigozie Nwalie Portfolio",
+    "section": "Public School Dashboard",
+    "text": "Public School Dashboard\n\nInsight\nInteractive dashboard that visualizes funding disparities and performance in schools. ### Tech Power BI, Python, Pandas"
+  },
+  {
+    "objectID": "landing.html#restaurant-review-trends",
+    "href": "landing.html#restaurant-review-trends",
+    "title": "Chigozie Nwalie Portfolio",
+    "section": "Restaurant Review Trends",
+    "text": "Restaurant Review Trends\n\nInsight\nAnalyzed sentiment and trends in restaurant reviews to uncover customer preferences. ### Tech Python, NLP, TextBlob, WordCloud"
+  },
+  {
+    "objectID": "restaurant-reviews.html#most-frequent-words-in-reviews",
+    "href": "restaurant-reviews.html#most-frequent-words-in-reviews",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "We visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words"
+  },
+  {
+    "objectID": "netflix-clustering.html",
+    "href": "netflix-clustering.html",
+    "title": "Netflix User Segmentation",
+    "section": "",
+    "text": "This project explores how we can segment Netflix-style users based on their viewing and rating behavior. We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset — a popular proxy for streaming behavior.\n\n\n\n\nPandas for data wrangling\nScikit-learn for K-Means clustering & PCA\nMatplotlib for visualizations\nStandardScaler for normalization\n\n\n\n\n\nWe used K-Means clustering on normalized user behavior (e.g., avg rating, rating frequency, rating consistency). PCA was applied to reduce dimensions and visualize user segments.\n\n\n\nUser Clusters\n\n\n\n\n\n\nHere’s the number of users that fell into each cluster group:\n\n\n\nCluster Sizes\n\n\n\n\n\n\nSome clusters tend to rate movies more positively than others. This view reveals behavioral differences between user types.\n\n\n\nAverage Rating by Cluster\n\n\n\n\n\n\n\nCluster 1 contains high-frequency raters with consistently high ratings — likely loyal or engaged users\nCluster 2 includes viewers with low average ratings — possibly critics or picky watchers\nCluster 3 has moderate activity and average rating variance — casual or balanced users\nCluster 0 users are active but inconsistent — might reflect binge-watchers or exploratory viewers\n\nThese segments can help streaming platforms personalize recommendations, manage churn risk, or optimize engagement strategies.\n\n\n\n\nCode used for clustering and visualizations: netflix_clustering.py\n\n\n\n\nThis project demonstrates how clustering can uncover meaningful user segments from real viewing data. Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention."
+  },
+  {
+    "objectID": "netflix-clustering.html#tools-techniques",
+    "href": "netflix-clustering.html#tools-techniques",
+    "title": "Netflix User Segmentation",
+    "section": "",
+    "text": "Pandas for data wrangling\nScikit-learn for K-Means clustering & PCA\nMatplotlib for visualizations\nStandardScaler for normalization"
+  },
+  {
+    "objectID": "netflix-clustering.html#pca-projection-of-user-clusters",
+    "href": "netflix-clustering.html#pca-projection-of-user-clusters",
+    "title": "Netflix User Segmentation",
+    "section": "",
+    "text": "We used K-Means clustering on normalized user behavior (e.g., avg rating, rating frequency, rating consistency). PCA was applied to reduce dimensions and visualize user segments.\n\n\n\nUser Clusters"
+  },
+  {
+    "objectID": "netflix-clustering.html#cluster-distribution",
+    "href": "netflix-clustering.html#cluster-distribution",
+    "title": "Netflix User Segmentation",
+    "section": "",
+    "text": "Here’s the number of users that fell into each cluster group:\n\n\n\nCluster Sizes"
+  },
+  {
+    "objectID": "netflix-clustering.html#average-rating-by-cluster",
+    "href": "netflix-clustering.html#average-rating-by-cluster",
+    "title": "Netflix User Segmentation",
+    "section": "",
+    "text": "Some clusters tend to rate movies more positively than others. This view reveals behavioral differences between user types.\n\n\n\nAverage Rating by Cluster"
+  },
+  {
+    "objectID": "netflix-clustering.html#insights",
+    "href": "netflix-clustering.html#insights",
+    "title": "Netflix User Segmentation",
+    "section": "",
+    "text": "Cluster 1 contains high-frequency raters with consistently high ratings — likely loyal or engaged users\nCluster 2 includes viewers with low average ratings — possibly critics or picky watchers\nCluster 3 has moderate activity and average rating variance — casual or balanced users\nCluster 0 users are active but inconsistent — might reflect binge-watchers or exploratory viewers\n\nThese segments can help streaming platforms personalize recommendations, manage churn risk, or optimize engagement strategies."
+  },
+  {
+    "objectID": "netflix-clustering.html#notebook",
+    "href": "netflix-clustering.html#notebook",
+    "title": "Netflix User Segmentation",
+    "section": "",
+    "text": "Code used for clustering and visualizations: netflix_clustering.py"
+  },
+  {
+    "objectID": "netflix-clustering.html#summary",
+    "href": "netflix-clustering.html#summary",
+    "title": "Netflix User Segmentation",
+    "section": "",
+    "text": "This project demonstrates how clustering can uncover meaningful user segments from real viewing data. Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention."
+  },
+  {
+    "objectID": "contact.html#links",
+    "href": "contact.html#links",
+    "title": "Contact",
+    "section": "",
+    "text": "🌐 GitHub: @chigozie9\n💼 LinkedIn: Andrew Nwalie\n✉️ Email: andrew1nwalie@gmail.com"
+  },
+  {
+    "objectID": "contact.html#open-to",
+    "href": "contact.html#open-to",
+    "title": "Contact",
+    "section": "",
+    "text": "Freelance & contract work (data, dashboards, automation)\nFull-time roles in data analytics or machine learning\n\n\n🌟"
   }
 ]

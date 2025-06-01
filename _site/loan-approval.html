@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Loan Approval Prediction – Your Name | Data Portfolio</title>
+<title>Loan Approval Prediction – Andrew | Data Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,12 +24,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -39,20 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-d674329283ff509a4f5b6ea4cf34a1fe.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
-  "location": "navbar",
-  "copy-button": false,
-  "collapse-after": 3,
-  "panel-placement": "end",
-  "type": "overlay",
-  "limit": 50,
-  "keyboard-shortcut": [
-    "f",
-    "/",
-    "s"
-  ],
-  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -69,9 +52,10 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles/landing.css">
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -79,10 +63,9 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Your Name | Data Portfolio</span>
+    <span class="navbar-title">Andrew | Data Portfolio</span>
     </a>
   </div>
-            <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
@@ -93,12 +76,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./loan-approval.html" aria-current="page"> 
-<span class="menu-text">Loan Approval Model</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./dashboard.html"> 
-<span class="menu-text">Public School Dashboard</span></a>
+    <a class="nav-link" href="./#projects-section"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./contact.html"> 
@@ -115,32 +94,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#loan-approval-prediction-project" id="toc-loan-approval-prediction-project" class="nav-link active" data-scroll-target="#loan-approval-prediction-project">🏦 Loan Approval Prediction Project</a>
-  <ul class="collapse">
-  <li><a href="#problem-statement" id="toc-problem-statement" class="nav-link" data-scroll-target="#problem-statement">📌 Problem Statement</a></li>
-  <li><a href="#dataset-overview" id="toc-dataset-overview" class="nav-link" data-scroll-target="#dataset-overview">📊 Dataset Overview</a></li>
-  <li><a href="#exploratory-data-analysis-eda" id="toc-exploratory-data-analysis-eda" class="nav-link" data-scroll-target="#exploratory-data-analysis-eda">🔍 Exploratory Data Analysis (EDA)</a>
-  <ul class="collapse">
-  <li><a href="#loan-approval-rate-by-loan-purpose" id="toc-loan-approval-rate-by-loan-purpose" class="nav-link" data-scroll-target="#loan-approval-rate-by-loan-purpose">🧭 Loan Approval Rate by Loan Purpose</a></li>
-  <li><a href="#income-distribution-by-loan-approval" id="toc-income-distribution-by-loan-approval" class="nav-link" data-scroll-target="#income-distribution-by-loan-approval">💵 Income Distribution by Loan Approval</a></li>
-  </ul></li>
-  <li><a href="#model-building" id="toc-model-building" class="nav-link" data-scroll-target="#model-building">🧠 Model Building</a>
-  <ul class="collapse">
-  <li><a href="#logistic-regression-model" id="toc-logistic-regression-model" class="nav-link" data-scroll-target="#logistic-regression-model">📐 Logistic Regression Model</a></li>
-  <li><a href="#confusion-matrix-logistic-regression" id="toc-confusion-matrix-logistic-regression" class="nav-link" data-scroll-target="#confusion-matrix-logistic-regression">🔢 Confusion Matrix – Logistic Regression</a></li>
-  <li><a href="#random-forest-classifier" id="toc-random-forest-classifier" class="nav-link" data-scroll-target="#random-forest-classifier">🌲 Random Forest Classifier</a></li>
-  </ul></li>
-  <li><a href="#results-takeaways" id="toc-results-takeaways" class="nav-link" data-scroll-target="#results-takeaways">✅ Results &amp; Takeaways</a></li>
-  <li><a href="#project-links" id="toc-project-links" class="nav-link" data-scroll-target="#project-links">🔗 Project Links</a></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -178,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="exploratory-data-analysis-eda" class="level2">
 <h2 class="anchored" data-anchor-id="exploratory-data-analysis-eda">🔍 Exploratory Data Analysis (EDA)</h2>
-<div id="82828b85" class="cell" data-execution_count="2">
+<div id="2aa40211" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -189,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="loan-approval-rate-by-loan-purpose" class="level3">
 <h3 class="anchored" data-anchor-id="loan-approval-rate-by-loan-purpose">🧭 Loan Approval Rate by Loan Purpose</h3>
-<div id="0a9eb356" class="cell" data-execution_count="3">
+<div id="036cb1d4" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -201,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="income-distribution-by-loan-approval" class="level3">
 <h3 class="anchored" data-anchor-id="income-distribution-by-loan-approval">💵 Income Distribution by Loan Approval</h3>
-<div id="753404a2" class="cell" data-execution_count="4">
+<div id="bb1c0594" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -225,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="model-building">🧠 Model Building</h2>
 <section id="logistic-regression-model" class="level3">
 <h3 class="anchored" data-anchor-id="logistic-regression-model">📐 Logistic Regression Model</h3>
-<div id="d1693932" class="cell" data-execution_count="5">
+<div id="659339f0" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy: 0.91
 Precision: 0.77
@@ -235,7 +189,7 @@ Recall: 0.54</code></pre>
 </section>
 <section id="confusion-matrix-logistic-regression" class="level3">
 <h3 class="anchored" data-anchor-id="confusion-matrix-logistic-regression">🔢 Confusion Matrix – Logistic Regression</h3>
-<div id="a9708b3a" class="cell" data-execution_count="6">
+<div id="1e2495b8" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -247,7 +201,7 @@ Recall: 0.54</code></pre>
 </section>
 <section id="random-forest-classifier" class="level3">
 <h3 class="anchored" data-anchor-id="random-forest-classifier">🌲 Random Forest Classifier</h3>
-<div id="7afd7907" class="cell" data-execution_count="7">
+<div id="0632da26" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy: 0.95
 Precision: 0.92

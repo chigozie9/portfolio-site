@@ -2,19 +2,21 @@ project:
   type: website
 
 website:
-  title: "Your Name | Data Portfolio"
+  title: "Andrew | Data Portfolio"
   navbar:
+    background: "#2a4066"
+    pinned: true
     left:
-      - href: index.qmd
-        text: Home
-      - href: loan-approval.qmd
-        text: Loan Approval Model
-      - href: dashboard.qmd
-        text: Public School Dashboard
-      - href: contact.qmd
-        text: Contact
+      - text: "Home"
+        href: "index.qmd"
+      - text: "Projects"
+        href: "#projects-section"
+      - text: "Contact"
+        href: "contact.qmd"
+  search: false  # Disables the search feature
 
 format:
   html:
-    theme: cosmo
-    toc: true
+    theme: default
+    css: "styles/landing.css"
+    toc: false

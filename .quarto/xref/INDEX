@@ -10,5 +10,14 @@
   },
   "index.qmd": {
     "index.html": "68a42ae5"
+  },
+  "landing.qmd": {
+    "landing.html": "d46051e1"
+  },
+  "restaurant-reviews.qmd": {
+    "restaurant-reviews.html": "5fcb1f97"
+  },
+  "netflix-clustering.qmd": {
+    "netflix-clustering.html": "9d455859"
   }
 }

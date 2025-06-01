@@ -1,0 +1,71 @@
+---
+title: "Netflix User Segmentation"
+format: html
+page-layout: full
+css: styles/style.css
+---
+
+# 🎬 Netflix User Segmentation with K-Means Clustering
+
+This project explores how we can segment Netflix-style users based on their viewing and rating behavior.
+We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset — a popular proxy for streaming behavior.
+
+---
+
+## 🧠 Tools & Techniques
+
+- **Pandas** for data wrangling
+- **Scikit-learn** for K-Means clustering & PCA
+- **Matplotlib** for visualizations
+- **StandardScaler** for normalization
+
+---
+
+## 🧩 PCA Projection of User Clusters
+
+We used K-Means clustering on normalized user behavior (e.g., avg rating, rating frequency, rating consistency).
+PCA was applied to reduce dimensions and visualize user segments.
+
+![User Clusters](data/netflix_user_clusters.png)
+
+---
+
+## 📊 Cluster Distribution
+
+Here's the number of users that fell into each cluster group:
+
+![Cluster Sizes](data/netflix_cluster_sizes.png)
+
+---
+
+## ⭐ Average Rating by Cluster
+
+Some clusters tend to rate movies more positively than others.
+This view reveals behavioral differences between user types.
+
+![Average Rating by Cluster](data/netflix_cluster_avg_rating.png)
+
+---
+
+## 🔍 Insights
+
+- **Cluster 1** contains high-frequency raters with consistently high ratings — likely loyal or engaged users
+- **Cluster 2** includes viewers with low average ratings — possibly critics or picky watchers
+- **Cluster 3** has moderate activity and average rating variance — casual or balanced users
+- **Cluster 0** users are active but inconsistent — might reflect binge-watchers or exploratory viewers
+
+These segments can help streaming platforms personalize recommendations, manage churn risk, or optimize engagement strategies.
+
+---
+
+## 💻 Notebook
+
+Code used for clustering and visualizations:
+[`netflix_clustering.py`](data/netflix_clustering.py)
+
+---
+
+## 🧾 Summary
+
+This project demonstrates how clustering can uncover meaningful user segments from real viewing data.
+Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention.

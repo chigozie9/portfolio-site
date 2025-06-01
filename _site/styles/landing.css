@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: #1a1f3a url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path d="M0 50 Q25 60 50 50 T100 60 Q125 70 150 60 T200 50" fill="none" stroke="%2300ccff" stroke-width="1"/><path d="M0 70 Q30 80 60 70 T120 80 Q150 90 180 80 T200 70" fill="none" stroke="%2300ccff" stroke-width="1" opacity="0.7"/><path d="M0 30 Q20 40 40 30 T80 40 Q100 50 120 40 T160 50 Q180 40 200 30" fill="none" stroke="%2300ccff" stroke-width="1" opacity="0.5"/></svg>') repeat;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Hide the default Quarto title block */
+#title-block-header, .quarto-title {
+    display: none;
+}
+
+/* Style Quarto's navbar to match the original design */
+.navbar {
+    background-color: #2a4066;
+    padding: 10px 20px;
+    border-bottom: 1px solid #00ffcc;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Remove Quarto's default navbar title and toggler (if any) */
+.navbar-brand, .navbar-toggler {
+    display: none;
+}
+
+/* Style the navbar links container */
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Style individual navbar links */
+.nav-link {
+    color: #ffffff !important;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #00ffcc !important;
+}
+
+#header {
+    padding: 150px 40px 100px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+    color: #ffffff;
+}
+
+.highlight {
+    color: #ff4444;
+}
+
+.hero p {
+    font-size: 24px;
+    color: #a0e8e8;
+    margin: 10px 0;
+}
+
+.view-projects {
+    background: #ff4444;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.3s;
+    margin-top: 20px;
+}
+
+.view-projects:hover {
+    transform: scale(1.1);
+    background: #cc3333;
+}
+
+#spacer {
+    height: 50vh;
+}
+
+#projects-section {
+    padding: 50px 40px;
+    text-align: center;
+    background: #2a2f5a;
+}
+
+#projects-section h2 {
+    font-size: 24px;
+    color: #00ffcc;
+    margin-bottom: 30px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border: 1px solid #00ffcc;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.2);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h2 {
+    font-size: 20px;
+    color: #00ffcc;
+    margin-bottom: 10px;
+}
+
+.project-card h2 a {
+    color: #00ffcc;
+    text-decoration: none;
+}
+
+.project-card h2 a:hover {
+    color: #00cc99;
+}
+
+.project-card p {
+    font-size: 14px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.project-card strong {
+    color: #00ffcc;
+}
+
+#footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    border-top: 1px solid #00ffcc;
+    color: #00ffcc;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+.footer-text a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-text a:hover {
+    color: #00cc99;
+}
+
+.footer-text p {
+    margin: 5px 0 0;
+}

@@ -1,27 +1,54 @@
 ---
-title: "Welcome"
+title: "Andrew Nwalie"
 format: html
+page-layout: full
+css: styles/landing.css
+include-in-header: |
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
 ---
 
-# 👋 Welcome
+:::{#header}
+<div class="hero">
+  <h1><span class="highlight">Hello, I'm Andrew.</span></h1>
+  <p>I'm a software engineer and data scientist.</p>
+  <a href="#projects-section"><button class="view-projects">View my work ↓</button></a>
+</div>
+:::
 
-Hi, I'm **Andrew Nwalie**, a data science and software engineering enthusiast focused on building intelligent, scalable solutions.
-This is my personal portfolio where I showcase select projects in machine learning, data visualization, analytics, and backend development.
+:::{#spacer}
+:::
 
-Feel free to explore my work and connect with me!
+:::{#projects-section}
+<h2>Featured Projects</h2>
+:::{.project-container}
 
-## 👨‍💻 About Me
+:::{.project-card}
+<h2><a href="loan-approval.qmd">Loan Approval Model</a></h2>
+<p>Built a machine learning model to predict loan approvals.</p>
+<p><strong>Tech:</strong> Python, XGBoost, Logistic Regression</p>
+:::
 
-I'm a recent Master's student in Data Science with 3 years of experience in Python automation.
-I'm passionate about solving real-world problems using data and software.
-I enjoy building end-to-end solutions — from ETL pipelines to machine learning models to dashboards.
+:::{.project-card}
+<h2><a href="netflix-clustering.qmd">Netflix User Segmentation</a></h2>
+<p>Unsupervised clustering of Netflix-style users based on their movie rating behavior.</p>
+<p><strong>Tech:</strong> Python, K-Means, PCA, Scikit-learn</p>
+:::
 
-Open to opportunities in data science, analytics, or software engineering — especially roles where I can apply both my analytical and coding skills.
+:::{.project-card}
+<h2><a href="restaurant-reviews.qmd">Restaurant Review Trends</a></h2>
+<p>Analyzed sentiment and trends in restaurant reviews.</p>
+<p><strong>Tech:</strong> Python, NLP, TextBlob, WordCloud</p>
+:::
+
+:::
+:::
 
 
-## 🛠 Skills & Tools
-
-- **Languages**: Python, SQL, R, JavaScript
-- **Libraries**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn
-- **Tools**: Jupyter, Git, Power BI, Tableau, Docker, Selenium
-- **Tech**: REST APIs, GitHub Actions, ETL, Web Scraping, BigQuery
+:::{#footer}
+<div class="footer-text">
+  <a href="https://github.com/chigozie9" target="_blank">GitHub</a> |
+  <a href="mailto:andrew1nwalie@gmail.com">Email</a> |
+  <a href="https://www.linkedin.com/in/andrew-nwalie-917640185/" target="_blank">LinkedIn</a>
+  <p>© 2025 Andrew Nwalie | Journey Beyond Data</p>
+</div>
+:::
