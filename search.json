@@ -4,7 +4,7 @@
     "href": "restaurant-reviews.html",
     "title": "Restaurant Reviews Dashboard",
     "section": "",
-    "text": "This project explores how customer sentiment and review volume evolved over time for various restaurants. We used natural language processing (NLP) to extract sentiment from review text and visualized how it correlated with rating trends.\n\n\n\n\nPandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard\n\n\n\n\n\n\n\n\nRating and Sentiment Over Time\n\n\n\n\n\n\n\n\n\nNumber of Reviews Over Time\n\n\n\n\n\n\nWe visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words\n\n\n\n\n\n\nCheck out the code in the notebook: restaurant_eda.py\n\n\n\n\nThis project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
+    "text": "This project explores how customer sentiment and review volume evolved over time for various restaurants. We used natural language processing (NLP) to extract sentiment from review text and visualized how it correlated with rating trends.\n\n\n\n\nPandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard\n\n\n\n\n\n\n\n\nRating and Sentiment Over Time\n\n\n\n\n\n\n\n\n\nNumber of Reviews Over Time\n\n\n\n\n\n\nWe visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words\n\n\n\n\n\n\nCheck out the code in the notebook: View on GitHub\n\n\n\n\nThis project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
   },
   {
     "objectID": "restaurant-reviews.html#tools-techniques",
@@ -39,7 +39,7 @@
     "href": "restaurant-reviews.html#notebook",
     "title": "Restaurant Reviews Dashboard",
     "section": "",
-    "text": "Check out the code in the notebook: restaurant_eda.py"
+    "text": "Check out the code in the notebook: View on GitHub"
   },
   {
     "objectID": "restaurant-reviews.html#summary",
@@ -144,7 +144,7 @@
     "href": "netflix-clustering.html",
     "title": "Netflix User Segmentation",
     "section": "",
-    "text": "This project explores how we can segment Netflix-style users based on their viewing and rating behavior. We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset — a popular proxy for streaming behavior.\n\n\n\n\nPandas for data wrangling\nScikit-learn for K-Means clustering & PCA\nMatplotlib for visualizations\nStandardScaler for normalization\n\n\n\n\n\nWe used K-Means clustering on normalized user behavior (e.g., avg rating, rating frequency, rating consistency). PCA was applied to reduce dimensions and visualize user segments.\n\n\n\nUser Clusters\n\n\n\n\n\n\nHere’s the number of users that fell into each cluster group:\n\n\n\nCluster Sizes\n\n\n\n\n\n\nSome clusters tend to rate movies more positively than others. This view reveals behavioral differences between user types.\n\n\n\nAverage Rating by Cluster\n\n\n\n\n\n\n\nCluster 1 contains high-frequency raters with consistently high ratings — likely loyal or engaged users\nCluster 2 includes viewers with low average ratings — possibly critics or picky watchers\nCluster 3 has moderate activity and average rating variance — casual or balanced users\nCluster 0 users are active but inconsistent — might reflect binge-watchers or exploratory viewers\n\nThese segments can help streaming platforms personalize recommendations, manage churn risk, or optimize engagement strategies.\n\n\n\n\nCode used for clustering and visualizations: netflix_clustering.py\n\n\n\n\nThis project demonstrates how clustering can uncover meaningful user segments from real viewing data. Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention."
+    "text": "This project explores how we can segment Netflix-style users based on their viewing and rating behavior. We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset — a popular proxy for streaming behavior.\n\n\n\n\nPandas for data wrangling\nScikit-learn for K-Means clustering & PCA\nMatplotlib for visualizations\nStandardScaler for normalization\n\n\n\n\n\nWe used K-Means clustering on normalized user behavior (e.g., avg rating, rating frequency, rating consistency). PCA was applied to reduce dimensions and visualize user segments.\n\n\n\nUser Clusters\n\n\n\n\n\n\nHere’s the number of users that fell into each cluster group:\n\n\n\nCluster Sizes\n\n\n\n\n\n\nSome clusters tend to rate movies more positively than others. This view reveals behavioral differences between user types.\n\n\n\nAverage Rating by Cluster\n\n\n\n\n\n\n\nCluster 1 contains high-frequency raters with consistently high ratings — likely loyal or engaged users\nCluster 2 includes viewers with low average ratings — possibly critics or picky watchers\nCluster 3 has moderate activity and average rating variance — casual or balanced users\nCluster 0 users are active but inconsistent — might reflect binge-watchers or exploratory viewers\n\nThese segments can help streaming platforms personalize recommendations, manage churn risk, or optimize engagement strategies.\n\n\n\n\nCode used for clustering and visualizations: View on GitHub\n\n\n\n\nThis project demonstrates how clustering can uncover meaningful user segments from real viewing data. Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention."
   },
   {
     "objectID": "netflix-clustering.html#tools-techniques",
@@ -186,7 +186,7 @@
     "href": "netflix-clustering.html#notebook",
     "title": "Netflix User Segmentation",
     "section": "",
-    "text": "Code used for clustering and visualizations: netflix_clustering.py"
+    "text": "Code used for clustering and visualizations: View on GitHub"
   },
   {
     "objectID": "netflix-clustering.html#summary",
