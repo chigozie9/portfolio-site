@@ -73,7 +73,7 @@ Power BI as I am chasing down a flaky test.</p>
 <div class="footer-text">
   <a href="https://github.com/chigozie9" target="_blank">GitHub</a> |
   <a href="mailto:andrew1nwalie@gmail.com">Email</a> |
-  <a href="https://www.linkedin.com/in/andrew-nwalie-917640185/" target="_blank">LinkedIn</a>
+  <a href="https://www.linkedin.com/in/andrew-nwalie/" target="_blank">LinkedIn</a>
   <p>© 2026 Andrew Nwalie</p>
 </div>
 :::
