@@ -94,8 +94,65 @@ body {
     background: #cc3333;
 }
 
-#spacer {
-    height: 50vh;
+.hero .hero-sub {
+    font-size: 16px;
+    color: #c8d3f0;
+}
+
+#about-section {
+    padding: 60px 40px;
+    background: #1f2547;
+    text-align: center;
+}
+
+#about-section h2 {
+    font-size: 24px;
+    color: #00ffcc;
+    margin-bottom: 20px;
+}
+
+#about-section > p {
+    max-width: 760px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+.skill-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-group {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 255, 204, 0.4);
+    border-radius: 8px;
+    padding: 14px 18px;
+    width: 220px;
+}
+
+.skill-group h3 {
+    font-size: 15px;
+    color: #00ffcc;
+    margin: 0 0 8px;
+}
+
+.skill-group p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    #header { padding: 120px 16px 60px; min-height: 80vh; }
+    .hero h1 { font-size: 32px; }
+    .hero p { font-size: 18px; }
+    #about-section, #projects-section { padding: 40px 16px; }
+    .skill-group, .project-card { width: 100%; }
 }
 
 #projects-section {

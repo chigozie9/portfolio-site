@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Loan Approval Prediction – Andrew | Data Portfolio</title>
+<title>Loan Approval Prediction – Andrew Nwalie | Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Andrew | Data Portfolio</span>
+    <span class="navbar-title">Andrew Nwalie | Portfolio</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -77,7 +77,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./#projects-section"> 
+    <a class="nav-link" href="./index.html#about-section"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html#projects-section"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -127,13 +131,21 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="dataset-overview" class="level2">
 <h2 class="anchored" data-anchor-id="dataset-overview">📊 Dataset Overview</h2>
-<p>The dataset includes information such as: - Applicant income - Education level - Employment status - Loan amount - Credit history - Marital status - Property area</p>
+<p>The dataset (<a href="https://www.kaggle.com/competitions/playground-series-s4e10">Kaggle Playground Series S4E10</a>) includes:</p>
+<ul>
+<li>Applicant age, income and home ownership</li>
+<li>Employment length</li>
+<li>Loan purpose (intent), grade and amount</li>
+<li>Interest rate and loan-to-income ratio</li>
+<li>Credit history length and prior defaults</li>
+<li>Loan status (approved / not approved), the target</li>
+</ul>
 <p>After preprocessing, we were left with a clean dataset ready for modeling.</p>
 <hr>
 </section>
 <section id="exploratory-data-analysis-eda" class="level2">
 <h2 class="anchored" data-anchor-id="exploratory-data-analysis-eda">🔍 Exploratory Data Analysis (EDA)</h2>
-<div id="2fd3ba58" class="cell" data-execution_count="2">
+<div id="18b5eacb" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -144,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <section id="loan-approval-rate-by-loan-purpose" class="level3">
 <h3 class="anchored" data-anchor-id="loan-approval-rate-by-loan-purpose">🧭 Loan Approval Rate by Loan Purpose</h3>
-<div id="4edd5ac7" class="cell" data-execution_count="3">
+<div id="7ea30057" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -156,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="income-distribution-by-loan-approval" class="level3">
 <h3 class="anchored" data-anchor-id="income-distribution-by-loan-approval">💵 Income Distribution by Loan Approval</h3>
-<div id="c1fd2e8e" class="cell" data-execution_count="4">
+<div id="780aa82d" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -180,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="model-building">🧠 Model Building</h2>
 <section id="logistic-regression-model" class="level3">
 <h3 class="anchored" data-anchor-id="logistic-regression-model">📐 Logistic Regression Model</h3>
-<div id="c0270954" class="cell" data-execution_count="5">
+<div id="81dfbcf7" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy: 0.91
 Precision: 0.77
@@ -190,7 +202,7 @@ Recall: 0.54</code></pre>
 </section>
 <section id="confusion-matrix-logistic-regression" class="level3">
 <h3 class="anchored" data-anchor-id="confusion-matrix-logistic-regression">🔢 Confusion Matrix – Logistic Regression</h3>
-<div id="97b0d873" class="cell" data-execution_count="6">
+<div id="7fd43afa" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -202,7 +214,7 @@ Recall: 0.54</code></pre>
 </section>
 <section id="random-forest-classifier" class="level3">
 <h3 class="anchored" data-anchor-id="random-forest-classifier">🌲 Random Forest Classifier</h3>
-<div id="2d130b6c" class="cell" data-execution_count="7">
+<div id="eb2fa80c" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Accuracy: 0.95
 Precision: 0.92
@@ -223,9 +235,18 @@ Recall: 0.72</code></pre>
 </div>
 </div>
 </div>
-<p>We tested several models: - <strong>Logistic Regression</strong> - <strong>Random Forest</strong> - <strong>Support Vector Machine (SVM)</strong></p>
-<p>After tuning, the <strong>Random Forest</strong> model delivered the best overall performance.</p>
-<p><strong>Final Metrics (Random Forest):</strong> - Accuracy: <strong>0.95</strong> - Precision: <strong>0.92</strong> - Recall: <strong>0.72</strong></p>
+<p>We compared two models:</p>
+<ul>
+<li><strong>Logistic Regression</strong> (baseline)</li>
+<li><strong>Random Forest</strong></li>
+</ul>
+<p>The <strong>Random Forest</strong> model delivered the best overall performance.</p>
+<p><strong>Final Metrics (Random Forest):</strong></p>
+<ul>
+<li>Accuracy: <strong>0.95</strong></li>
+<li>Precision: <strong>0.92</strong></li>
+<li>Recall: <strong>0.72</strong></li>
+</ul>
 <p>Feature importance analysis highlighted <strong>loan_percent_income</strong>, <strong>loan_int_rate</strong>, and <strong>person_income</strong> as the top predictors.</p>
 <hr>
 </section>
@@ -233,10 +254,10 @@ Recall: 0.72</code></pre>
 <section id="results-takeaways" class="level2">
 <h2 class="anchored" data-anchor-id="results-takeaways">✅ Results &amp; Takeaways</h2>
 <ul>
-<li>The <strong>Random Forest model</strong> achieved the best performance with strong accuracy and balanced metrics.</li>
-<li><strong>Loan-to-income ratio</strong>, <strong>interest rate</strong>, and <strong>income</strong> were the top predictors, according to feature importance.</li>
-<li><strong>Precision (92%)</strong> suggests the model reliably predicts approved loans, and <strong>recall (72%)</strong> shows good coverage of actual approvals.</li>
-<li>To improve the model:
+<li><p>The <strong>Random Forest model</strong> achieved the best performance with strong accuracy and balanced metrics.</p></li>
+<li><p><strong>Loan-to-income ratio</strong>, <strong>interest rate</strong>, and <strong>income</strong> were the top predictors, according to feature importance.</p></li>
+<li><p><strong>Precision (92%)</strong> suggests the model reliably predicts approved loans, and <strong>recall (72%)</strong> shows good coverage of actual approvals.</p></li>
+<li><p>To improve the model:</p>
 <ul>
 <li>Consider using <strong>external credit data</strong> or <strong>employment verification APIs</strong></li>
 <li>Explore <strong>class imbalance handling</strong> (e.g., SMOTE, weighted loss)</li>
@@ -247,10 +268,10 @@ Recall: 0.72</code></pre>
 <section id="project-links" class="level2">
 <h2 class="anchored" data-anchor-id="project-links">🔗 Project Links</h2>
 <ul>
-<li>📂 <a href="https://github.com/chigozie9/loan-approval-model">View the full notebook on GitHub</a></li>
-<li>📁 Dataset Source: <a href="https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset">Kaggle Loan Prediction Dataset</a></li>
+<li>📂 <a href="https://github.com/chigozie9/portfolio-site/blob/main/loan-approval.qmd">View the code for this page on GitHub</a></li>
+<li>📂 <a href="https://github.com/chigozie9/loan-approval-model">R version of this analysis (logistic regression + k-NN)</a></li>
+<li>📁 Dataset: <a href="https://www.kaggle.com/competitions/playground-series-s4e10">Kaggle Playground Series S4E10, Loan Approval Prediction</a></li>
 </ul>
-<p>““”</p>
 
 
 </section>

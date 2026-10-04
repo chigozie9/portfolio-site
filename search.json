@@ -4,7 +4,7 @@
     "href": "restaurant-reviews.html",
     "title": "Restaurant Reviews Dashboard",
     "section": "",
-    "text": "This project explores how customer sentiment and review volume evolved over time for various restaurants. We used natural language processing (NLP) to extract sentiment from review text and visualized how it correlated with rating trends.\n\n\n\n\nPandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard\n\n\n\n\n\n\n\n\nRating and Sentiment Over Time\n\n\n\n\n\n\n\n\n\nNumber of Reviews Over Time\n\n\n\n\n\n\nWe visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words\n\n\n\n\n\n\nCheck out the code in the notebook: View on GitHub\n\n\n\n\nThis project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
+    "text": "This project explores how customer sentiment and review volume evolved over time for various restaurants. We used natural language processing (NLP) to extract sentiment from review text and visualized how it correlated with rating trends.\n\n\n\n\nPandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard\n\n\n\n\n\n\n\n\nRating and Sentiment Over Time\n\n\n\n\n\n\n\n\n\nNumber of Reviews Over Time\n\n\n\n\n\n\nWe visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words\n\n\n\n\n\n\nCheck out the code in the notebook: restaurant_eda.py\n\n\n\n\nThis project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
   },
   {
     "objectID": "restaurant-reviews.html#tools-techniques",
@@ -39,7 +39,7 @@
     "href": "restaurant-reviews.html#notebook",
     "title": "Restaurant Reviews Dashboard",
     "section": "",
-    "text": "Check out the code in the notebook: View on GitHub"
+    "text": "Check out the code in the notebook: restaurant_eda.py"
   },
   {
     "objectID": "restaurant-reviews.html#summary",
@@ -53,7 +53,7 @@
     "href": "loan-approval.html",
     "title": "Loan Approval Prediction",
     "section": "",
-    "text": "Can we predict whether a loan application will be approved based on applicant information? This project simulates how financial institutions can use data science to improve decision-making in the lending process.\n\n\n\n\nThe dataset includes information such as: - Applicant income - Education level - Employment status - Loan amount - Credit history - Marital status - Property area\nAfter preprocessing, we were left with a clean dataset ready for modeling.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey insights discovered:\n\nDebt consolidation, medical, and home improvement loans had the highest approval rates.\nVenture loans had the lowest approval rate, indicating higher perceived risk.\nApproved applicants tended to have slightly lower median incomes, although the income range overlaps heavily.\nThe income distribution is heavily right-skewed, requiring log scaling for meaningful visualization.\n\nVisuals like histograms, boxplots, and bar charts were used to uncover these patterns.\n\n\n\n\n\n\n\n\n\nAccuracy: 0.91\nPrecision: 0.77\nRecall: 0.54\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe tested several models: - Logistic Regression - Random Forest - Support Vector Machine (SVM)\nAfter tuning, the Random Forest model delivered the best overall performance.\nFinal Metrics (Random Forest): - Accuracy: 0.95 - Precision: 0.92 - Recall: 0.72\nFeature importance analysis highlighted loan_percent_income, loan_int_rate, and person_income as the top predictors.\n\n\n\n\n\n\nThe Random Forest model achieved the best performance with strong accuracy and balanced metrics.\nLoan-to-income ratio, interest rate, and income were the top predictors, according to feature importance.\nPrecision (92%) suggests the model reliably predicts approved loans, and recall (72%) shows good coverage of actual approvals.\nTo improve the model:\n\nConsider using external credit data or employment verification APIs\nExplore class imbalance handling (e.g., SMOTE, weighted loss)\nExperiment with gradient boosting models for potential gains\n\n\n\n\n\n\n📂 View the full notebook on GitHub\n📁 Dataset Source: Kaggle Loan Prediction Dataset\n\n““”"
+    "text": "Can we predict whether a loan application will be approved based on applicant information? This project simulates how financial institutions can use data science to improve decision-making in the lending process.\n\n\n\n\nThe dataset (Kaggle Playground Series S4E10) includes:\n\nApplicant age, income and home ownership\nEmployment length\nLoan purpose (intent), grade and amount\nInterest rate and loan-to-income ratio\nCredit history length and prior defaults\nLoan status (approved / not approved), the target\n\nAfter preprocessing, we were left with a clean dataset ready for modeling.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey insights discovered:\n\nDebt consolidation, medical, and home improvement loans had the highest approval rates.\nVenture loans had the lowest approval rate, indicating higher perceived risk.\nApproved applicants tended to have slightly lower median incomes, although the income range overlaps heavily.\nThe income distribution is heavily right-skewed, requiring log scaling for meaningful visualization.\n\nVisuals like histograms, boxplots, and bar charts were used to uncover these patterns.\n\n\n\n\n\n\n\n\n\nAccuracy: 0.91\nPrecision: 0.77\nRecall: 0.54\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe compared two models:\n\nLogistic Regression (baseline)\nRandom Forest\n\nThe Random Forest model delivered the best overall performance.\nFinal Metrics (Random Forest):\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\nFeature importance analysis highlighted loan_percent_income, loan_int_rate, and person_income as the top predictors.\n\n\n\n\n\n\nThe Random Forest model achieved the best performance with strong accuracy and balanced metrics.\nLoan-to-income ratio, interest rate, and income were the top predictors, according to feature importance.\nPrecision (92%) suggests the model reliably predicts approved loans, and recall (72%) shows good coverage of actual approvals.\nTo improve the model:\n\nConsider using external credit data or employment verification APIs\nExplore class imbalance handling (e.g., SMOTE, weighted loss)\nExperiment with gradient boosting models for potential gains\n\n\n\n\n\n\n📂 View the code for this page on GitHub\n📂 R version of this analysis (logistic regression + k-NN)\n📁 Dataset: Kaggle Playground Series S4E10, Loan Approval Prediction"
   },
   {
     "objectID": "loan-approval.html#problem-statement",
@@ -67,7 +67,7 @@
     "href": "loan-approval.html#dataset-overview",
     "title": "Loan Approval Prediction",
     "section": "",
-    "text": "The dataset includes information such as: - Applicant income - Education level - Employment status - Loan amount - Credit history - Marital status - Property area\nAfter preprocessing, we were left with a clean dataset ready for modeling."
+    "text": "The dataset (Kaggle Playground Series S4E10) includes:\n\nApplicant age, income and home ownership\nEmployment length\nLoan purpose (intent), grade and amount\nInterest rate and loan-to-income ratio\nCredit history length and prior defaults\nLoan status (approved / not approved), the target\n\nAfter preprocessing, we were left with a clean dataset ready for modeling."
   },
   {
     "objectID": "loan-approval.html#exploratory-data-analysis-eda",
@@ -81,7 +81,7 @@
     "href": "loan-approval.html#model-building",
     "title": "Loan Approval Prediction",
     "section": "",
-    "text": "Accuracy: 0.91\nPrecision: 0.77\nRecall: 0.54\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe tested several models: - Logistic Regression - Random Forest - Support Vector Machine (SVM)\nAfter tuning, the Random Forest model delivered the best overall performance.\nFinal Metrics (Random Forest): - Accuracy: 0.95 - Precision: 0.92 - Recall: 0.72\nFeature importance analysis highlighted loan_percent_income, loan_int_rate, and person_income as the top predictors."
+    "text": "Accuracy: 0.91\nPrecision: 0.77\nRecall: 0.54\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe compared two models:\n\nLogistic Regression (baseline)\nRandom Forest\n\nThe Random Forest model delivered the best overall performance.\nFinal Metrics (Random Forest):\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\nFeature importance analysis highlighted loan_percent_income, loan_int_rate, and person_income as the top predictors."
   },
   {
     "objectID": "loan-approval.html#results-takeaways",
@@ -95,28 +95,49 @@
     "href": "loan-approval.html#project-links",
     "title": "Loan Approval Prediction",
     "section": "",
-    "text": "📂 View the full notebook on GitHub\n📁 Dataset Source: Kaggle Loan Prediction Dataset\n\n““”"
+    "text": "📂 View the code for this page on GitHub\n📂 R version of this analysis (logistic regression + k-NN)\n📁 Dataset: Kaggle Playground Series S4E10, Loan Approval Prediction"
   },
   {
-    "objectID": "dashboard.html",
-    "href": "dashboard.html",
-    "title": "Public School Security Dashboard",
+    "objectID": "finance-dashboard.html",
+    "href": "finance-dashboard.html",
+    "title": "Personal Finance Dashboard",
     "section": "",
-    "text": "An interactive dashboard using Power BI/Tableau to explore school security incidents across districts.\n\n\n\nYear-over-year trend analysis\nGeographic distribution\nCorrelations with funding and student population"
+    "text": "An interactive web app for tracking income, expenses and spending trends, built with Streamlit, pandas and Plotly.\n\n\n\n\n\n\nDashboard overview\n\n\n\n\n\n\n\nAdd transactions manually from the sidebar, or import them from a CSV file\nRunning balance and monthly net cash flow\nInteractive category breakdown of expenses (pie chart)\nThree views: Overview, Transactions and Insights, plus quick stats\nData persists between sessions in CSV storage\n\n\n\n\n\n\nPython for the app logic\nStreamlit for the UI and interactivity\npandas for data processing\nPlotly for interactive charts\n\n\n\n\n\nSource code and setup instructions: github.com/chigozie9/personal-finance-dashboard"
   },
   {
-    "objectID": "dashboard.html#insights",
-    "href": "dashboard.html#insights",
-    "title": "Public School Security Dashboard",
+    "objectID": "finance-dashboard.html#screenshot",
+    "href": "finance-dashboard.html#screenshot",
+    "title": "Personal Finance Dashboard",
     "section": "",
-    "text": "Year-over-year trend analysis\nGeographic distribution\nCorrelations with funding and student population"
+    "text": "Dashboard overview"
+  },
+  {
+    "objectID": "finance-dashboard.html#features",
+    "href": "finance-dashboard.html#features",
+    "title": "Personal Finance Dashboard",
+    "section": "",
+    "text": "Add transactions manually from the sidebar, or import them from a CSV file\nRunning balance and monthly net cash flow\nInteractive category breakdown of expenses (pie chart)\nThree views: Overview, Transactions and Insights, plus quick stats\nData persists between sessions in CSV storage"
+  },
+  {
+    "objectID": "finance-dashboard.html#tech-stack",
+    "href": "finance-dashboard.html#tech-stack",
+    "title": "Personal Finance Dashboard",
+    "section": "",
+    "text": "Python for the app logic\nStreamlit for the UI and interactivity\npandas for data processing\nPlotly for interactive charts"
+  },
+  {
+    "objectID": "finance-dashboard.html#code",
+    "href": "finance-dashboard.html#code",
+    "title": "Personal Finance Dashboard",
+    "section": "",
+    "text": "Source code and setup instructions: github.com/chigozie9/personal-finance-dashboard"
   },
   {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
     "section": "",
-    "text": "I’d love to connect — whether you’re hiring, collaborating, or just saying hi!\n\n\n\n\n🌐 GitHub: @chigozie9\n💼 LinkedIn: Andrew Nwalie\n✉️ Email: andrew1nwalie@gmail.com\n\n\n\n\n\n\nFreelance & contract work (data, dashboards, automation)\nFull-time roles in data analytics or machine learning\n\n\n🌟"
+    "text": "I’d love to connect, whether you’re hiring, collaborating, or just saying hi!\n\n\n\n\n🌐 GitHub: @chigozie9\n💼 LinkedIn: Andrew Nwalie\n✉️ Email: andrew1nwalie@gmail.com\n\n\n\n\n\n\nRemote full-time roles in QA automation / SDET\nRemote data analyst and analytics roles"
   },
   {
     "objectID": "contact.html#links",
@@ -130,21 +151,21 @@
     "href": "contact.html#open-to",
     "title": "Contact",
     "section": "",
-    "text": "Freelance & contract work (data, dashboards, automation)\nFull-time roles in data analytics or machine learning\n\n\n🌟"
+    "text": "Remote full-time roles in QA automation / SDET\nRemote data analyst and analytics roles"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Andrew Nwalie",
     "section": "",
-    "text": "Hello, I’m Andrew Nwalie.\n\n\nI’m a software engineer and data scientist.\n\nView my work ↓\n\n\n\n\n\n\n\nFeatured Projects\n\n\n\n\nLoan Approval Model\n\n\nBuilt a machine learning model to predict loan approvals.\n\n\nTech: Python, XGBoost, Logistic Regression\n\n\n\n\nNetflix User Segmentation\n\n\nUnsupervised clustering of Netflix-style users based on their movie rating behavior.\n\n\nTech: Python, K-Means, PCA, Scikit-learn\n\n\n\n\nRestaurant Review Trends\n\n\nAnalyzed sentiment and trends in restaurant reviews.\n\n\nTech: Python, NLP, TextBlob, WordCloud\n\n\n\n\n\n\nGitHub | Email | LinkedIn\n\n© 2025 Andrew Nwalie | Journey Beyond Data"
+    "text": "Hello, I’m Andrew.\n\n\nQA automation engineer (SDET) and data analyst.\n\n\n4 years building Python test automation for enterprise apps · M.S. Data Science, Texas Tech\n\nView my work ↓\n\n\n\n\nAbout\n\n\nI spent four years at Tata Consultancy Services as an automation engineer, building and maintaining Python + Selenium test suites for enterprise web applications, validating REST APIs and databases with Postman and SQL, and running automated tests in Jenkins CI pipelines. I also hold a B.S. in Computer Science and an M.S. in Data Science, so I’m just as comfortable digging into data with pandas, scikit-learn and Power BI as I am chasing down a flaky test.\n\n\n\n\nTesting & Automation\n\n\npytest · Selenium WebDriver · REST API testing · Postman · regression testing · Jenkins CI\n\n\n\n\nLanguages\n\n\nPython · SQL · Java · JavaScript / TypeScript · R\n\n\n\n\nData\n\n\npandas · scikit-learn · Plotly · Streamlit · Power BI · Quarto\n\n\n\n\nTools\n\n\nGit · GitHub · Docker · JIRA · MongoDB · PostgreSQL · Agile/Scrum\n\n\n\n\n\n\nFeatured Projects\n\n\n\n\nWarehouse Inventory Manager\n\n\nFull-stack app for managing warehouses, inventory and stock transfers, with capacity validation and centralized error handling.\n\n\nTech: Java, Spring Boot, JPA, PostgreSQL, React, REST APIs\n\n\n\n\nPersonal Finance Dashboard\n\n\nInteractive web app to import transactions and track income, spending by category and monthly net cash flow.\n\n\nTech: Python, Streamlit, pandas, Plotly\n\n\n\n\nLoan Approval Model\n\n\nCompared classifiers to predict loan approvals; Random Forest reached 95% accuracy and 92% precision.\n\n\nTech: Python, scikit-learn, Random Forest, Logistic Regression\n\n\n\n\nNetflix User Segmentation\n\n\nUnsupervised clustering of streaming users based on their movie rating behavior.\n\n\nTech: Python, K-Means, PCA, scikit-learn\n\n\n\n\nRestaurant Review Trends\n\n\nScored review sentiment and tracked how ratings and sentiment changed over time.\n\n\nTech: Python, NLP, TextBlob, WordCloud\n\n\n\n\n\n\nGitHub | Email | LinkedIn\n\n© 2026 Andrew Nwalie"
   },
   {
     "objectID": "netflix-clustering.html",
     "href": "netflix-clustering.html",
     "title": "Netflix User Segmentation",
     "section": "",
-    "text": "This project explores how we can segment Netflix-style users based on their viewing and rating behavior. We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset — a popular proxy for streaming behavior.\n\n\n\n\nPandas for data wrangling\nScikit-learn for K-Means clustering & PCA\nMatplotlib for visualizations\nStandardScaler for normalization\n\n\n\n\n\nWe used K-Means clustering on normalized user behavior (e.g., avg rating, rating frequency, rating consistency). PCA was applied to reduce dimensions and visualize user segments.\n\n\n\nUser Clusters\n\n\n\n\n\n\nHere’s the number of users that fell into each cluster group:\n\n\n\nCluster Sizes\n\n\n\n\n\n\nSome clusters tend to rate movies more positively than others. This view reveals behavioral differences between user types.\n\n\n\nAverage Rating by Cluster\n\n\n\n\n\n\n\nCluster 1 contains high-frequency raters with consistently high ratings — likely loyal or engaged users\nCluster 2 includes viewers with low average ratings — possibly critics or picky watchers\nCluster 3 has moderate activity and average rating variance — casual or balanced users\nCluster 0 users are active but inconsistent — might reflect binge-watchers or exploratory viewers\n\nThese segments can help streaming platforms personalize recommendations, manage churn risk, or optimize engagement strategies.\n\n\n\n\nCode used for clustering and visualizations: View on GitHub\n\n\n\n\nThis project demonstrates how clustering can uncover meaningful user segments from real viewing data. Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention."
+    "text": "This project explores how we can segment Netflix-style users based on their viewing and rating behavior. We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset, a popular proxy for streaming behavior.\n\n\n\n\nPandas for data wrangling\nScikit-learn for K-Means clustering & PCA\nMatplotlib for visualizations\nStandardScaler for normalization\n\n\n\n\n\nWe used K-Means clustering on normalized user behavior (e.g., avg rating, rating frequency, rating consistency). PCA was applied to reduce dimensions and visualize user segments.\n\n\n\nUser Clusters\n\n\n\n\n\n\nHere’s the number of users that fell into each cluster group:\n\n\n\nCluster Sizes\n\n\n\n\n\n\nSome clusters tend to rate movies more positively than others. This view reveals behavioral differences between user types.\n\n\n\nAverage Rating by Cluster\n\n\n\n\n\n\n\nCluster 1 contains high-frequency raters with consistently high ratings — likely loyal or engaged users\nCluster 2 includes viewers with low average ratings — possibly critics or picky watchers\nCluster 3 has moderate activity and average rating variance — casual or balanced users\nCluster 0 users are active but inconsistent — might reflect binge-watchers or exploratory viewers\n\nThese segments can help streaming platforms personalize recommendations, manage churn risk, or optimize engagement strategies.\n\n\n\n\nCode used for clustering and visualizations: netflix_clustering.py\n\n\n\n\nThis project demonstrates how clustering can uncover meaningful user segments from real viewing data. Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention."
   },
   {
     "objectID": "netflix-clustering.html#tools-techniques",
@@ -186,7 +207,7 @@
     "href": "netflix-clustering.html#notebook",
     "title": "Netflix User Segmentation",
     "section": "",
-    "text": "Code used for clustering and visualizations: View on GitHub"
+    "text": "Code used for clustering and visualizations: netflix_clustering.py"
   },
   {
     "objectID": "netflix-clustering.html#summary",

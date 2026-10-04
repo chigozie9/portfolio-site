@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Public School Security Dashboard – Andrew | Data Portfolio</title>
+<title>Personal Finance Dashboard – Andrew Nwalie | Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,7 +50,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-</head><body class="nav-fixed fullcontent quarto-light">custom-fonts.html
+</head><body class="nav-fixed quarto-light">custom-fonts.html
 
 
 <link rel="stylesheet" href="styles/landing.css">
@@ -64,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Andrew | Data Portfolio</span>
+    <span class="navbar-title">Andrew Nwalie | Portfolio</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -77,7 +77,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./#projects-section"> 
+    <a class="nav-link" href="./index.html#about-section"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html#projects-section"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -92,21 +96,21 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Public School Security Dashboard</h1>
+<h1 class="title">Personal Finance Dashboard</h1>
 </div>
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -118,18 +122,44 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="public-school-dashboard" class="level1">
-<h1>🏫 Public School Dashboard</h1>
-<p>An interactive dashboard using Power BI/Tableau to explore school security incidents across districts.</p>
-<section id="insights" class="level2">
-<h2 class="anchored" data-anchor-id="insights">Insights:</h2>
+<section id="personal-finance-dashboard" class="level1">
+<h1>💰 Personal Finance Dashboard</h1>
+<p>An interactive web app for tracking income, expenses and spending trends, built with Streamlit, pandas and Plotly.</p>
+<hr>
+<section id="screenshot" class="level2">
+<h2 class="anchored" data-anchor-id="screenshot">🖥️ Screenshot</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/finance_dashboard.png" class="img-fluid figure-img"></p>
+<figcaption>Dashboard overview</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="features" class="level2">
+<h2 class="anchored" data-anchor-id="features">✨ Features</h2>
 <ul>
-<li>Year-over-year trend analysis</li>
-<li>Geographic distribution</li>
-<li>Correlations with funding and student population</li>
+<li>Add transactions manually from the sidebar, or import them from a CSV file</li>
+<li>Running balance and monthly net cash flow</li>
+<li>Interactive category breakdown of expenses (pie chart)</li>
+<li>Three views: <strong>Overview</strong>, <strong>Transactions</strong> and <strong>Insights</strong>, plus quick stats</li>
+<li>Data persists between sessions in CSV storage</li>
 </ul>
-<iframe width="100%" height="500" src="https://public.tableau.com/views/YourDashboardLink" frameborder="0" allowfullscreen="">
-</iframe>
+<hr>
+</section>
+<section id="tech-stack" class="level2">
+<h2 class="anchored" data-anchor-id="tech-stack">🧰 Tech Stack</h2>
+<ul>
+<li><strong>Python</strong> for the app logic</li>
+<li><strong>Streamlit</strong> for the UI and interactivity</li>
+<li><strong>pandas</strong> for data processing</li>
+<li><strong>Plotly</strong> for interactive charts</li>
+</ul>
+<hr>
+</section>
+<section id="code" class="level2">
+<h2 class="anchored" data-anchor-id="code">💻 Code</h2>
+<p>Source code and setup instructions: <a href="https://github.com/chigozie9/personal-finance-dashboard">github.com/chigozie9/personal-finance-dashboard</a></p>
 
 
 </section>

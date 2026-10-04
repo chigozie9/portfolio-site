@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Andrew Nwalie – Andrew | Data Portfolio</title>
+<title>Andrew Nwalie – Andrew Nwalie | Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Andrew | Data Portfolio</span>
+    <span class="navbar-title">Andrew Nwalie | Portfolio</span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -123,7 +123,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./#projects-section"> 
+    <a class="nav-link" href="./index.html#about-section"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html#projects-section"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -167,16 +171,58 @@ ul.task-list li input[type="checkbox"] {
 <div id="header">
 <div class="hero">
 <h1>
-<span class="highlight">Hello, I’m Andrew Nwalie.</span>
+<span class="highlight">Hello, I’m Andrew.</span>
 </h1>
 <p>
-I’m a software engineer and data scientist.
+QA automation engineer (SDET) and data analyst.
+</p>
+<p class="hero-sub">
+4 years building Python test automation for enterprise apps · M.S. Data Science, Texas Tech
 </p>
 <p><a href="#projects-section"><button class="view-projects">View my work ↓</button></a></p>
 </div>
 </div>
-<div id="spacer">
-
+<div id="about-section">
+<h2 class="anchored">
+About
+</h2>
+<p>
+I spent four years at Tata Consultancy Services as an automation engineer, building and maintaining Python + Selenium test suites for enterprise web applications, validating REST APIs and databases with Postman and SQL, and running automated tests in Jenkins CI pipelines. I also hold a B.S. in Computer Science and an M.S. in Data Science, so I’m just as comfortable digging into data with pandas, scikit-learn and Power BI as I am chasing down a flaky test.
+</p>
+<div class="skill-groups">
+<div class="skill-group">
+<h3 class="anchored">
+Testing &amp; Automation
+</h3>
+<p>
+pytest · Selenium WebDriver · REST API testing · Postman · regression testing · Jenkins CI
+</p>
+</div>
+<div class="skill-group">
+<h3 class="anchored">
+Languages
+</h3>
+<p>
+Python · SQL · Java · JavaScript / TypeScript · R
+</p>
+</div>
+<div class="skill-group">
+<h3 class="anchored">
+Data
+</h3>
+<p>
+pandas · scikit-learn · Plotly · Streamlit · Power BI · Quarto
+</p>
+</div>
+<div class="skill-group">
+<h3 class="anchored">
+Tools
+</h3>
+<p>
+Git · GitHub · Docker · JIRA · MongoDB · PostgreSQL · Agile/Scrum
+</p>
+</div>
+</div>
 </div>
 <div id="projects-section">
 <h2 class="anchored">
@@ -185,13 +231,35 @@ Featured Projects
 <div class="project-container">
 <div class="project-card">
 <h2 class="anchored">
+<a href="https://github.com/chigozie9/WareHouse" target="_blank">Warehouse Inventory Manager</a>
+</h2>
+<p>
+Full-stack app for managing warehouses, inventory and stock transfers, with capacity validation and centralized error handling.
+</p>
+<p>
+<strong>Tech:</strong> Java, Spring Boot, JPA, PostgreSQL, React, REST APIs
+</p>
+</div>
+<div class="project-card">
+<h2 class="anchored">
+<a href="./finance-dashboard.html">Personal Finance Dashboard</a>
+</h2>
+<p>
+Interactive web app to import transactions and track income, spending by category and monthly net cash flow.
+</p>
+<p>
+<strong>Tech:</strong> Python, Streamlit, pandas, Plotly
+</p>
+</div>
+<div class="project-card">
+<h2 class="anchored">
 <a href="./loan-approval.html">Loan Approval Model</a>
 </h2>
 <p>
-Built a machine learning model to predict loan approvals.
+Compared classifiers to predict loan approvals; Random Forest reached 95% accuracy and 92% precision.
 </p>
 <p>
-<strong>Tech:</strong> Python, XGBoost, Logistic Regression
+<strong>Tech:</strong> Python, scikit-learn, Random Forest, Logistic Regression
 </p>
 </div>
 <div class="project-card">
@@ -199,10 +267,10 @@ Built a machine learning model to predict loan approvals.
 <a href="./netflix-clustering.html">Netflix User Segmentation</a>
 </h2>
 <p>
-Unsupervised clustering of Netflix-style users based on their movie rating behavior.
+Unsupervised clustering of streaming users based on their movie rating behavior.
 </p>
 <p>
-<strong>Tech:</strong> Python, K-Means, PCA, Scikit-learn
+<strong>Tech:</strong> Python, K-Means, PCA, scikit-learn
 </p>
 </div>
 <div class="project-card">
@@ -210,7 +278,7 @@ Unsupervised clustering of Netflix-style users based on their movie rating behav
 <a href="./restaurant-reviews.html">Restaurant Review Trends</a>
 </h2>
 <p>
-Analyzed sentiment and trends in restaurant reviews.
+Scored review sentiment and tracked how ratings and sentiment changed over time.
 </p>
 <p>
 <strong>Tech:</strong> Python, NLP, TextBlob, WordCloud
@@ -220,9 +288,9 @@ Analyzed sentiment and trends in restaurant reviews.
 </div>
 <div id="footer">
 <div class="footer-text">
-<a href="https://github.com/chigozie9" target="_blank">GitHub</a> | <a href="mailto:andrew1nwalie@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/andrew-nwalie-917640185/" target="_blank">LinkedIn</a>
+<a href="https://github.com/chigozie9" target="_blank">GitHub</a> | <a href="mailto:andrew1nwalie@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/andrew-nwalie/" target="_blank">LinkedIn</a>
 <p>
-© 2025 Andrew Nwalie | Journey Beyond Data
+© 2026 Andrew Nwalie
 </p>
 </div>
 </div>
