@@ -12,7 +12,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv("data/loan_data.csv")  # adjust path to your dataset
+df = pd.read_csv("data/loan_data.csv")
 ```
 
 # 🏦 Loan Approval Prediction Project
@@ -26,14 +26,14 @@ This project simulates how financial institutions can use data science to improv
 
 ## 📊 Dataset Overview
 
-The dataset includes information such as:
-- Applicant income
-- Education level
-- Employment status
-- Loan amount
-- Credit history
-- Marital status
-- Property area
+The dataset ([Kaggle Playground Series S4E10](https://www.kaggle.com/competitions/playground-series-s4e10)) includes:
+
+- Applicant age, income and home ownership
+- Employment length
+- Loan purpose (intent), grade and amount
+- Interest rate and loan-to-income ratio
+- Credit history length and prior defaults
+- Loan status (approved / not approved), the target
 
 After preprocessing, we were left with a clean dataset ready for modeling.
 
@@ -194,14 +194,15 @@ plt.tight_layout()
 plt.show()
 ```
 
-We tested several models:
-- **Logistic Regression**
-- **Random Forest**
-- **Support Vector Machine (SVM)**
+We compared two models:
 
-After tuning, the **Random Forest** model delivered the best overall performance.
+- **Logistic Regression** (baseline)
+- **Random Forest**
+
+The **Random Forest** model delivered the best overall performance.
 
 **Final Metrics (Random Forest):**
+
 - Accuracy: **0.95**
 - Precision: **0.92**
 - Recall: **0.72**
@@ -216,6 +217,7 @@ Feature importance analysis highlighted **loan_percent_income**, **loan_int_rate
 - **Loan-to-income ratio**, **interest rate**, and **income** were the top predictors, according to feature importance.
 - **Precision (92%)** suggests the model reliably predicts approved loans, and **recall (72%)** shows good coverage of actual approvals.
 - To improve the model:
+
   - Consider using **external credit data** or **employment verification APIs**
   - Explore **class imbalance handling** (e.g., SMOTE, weighted loss)
   - Experiment with **gradient boosting** models for potential gains
@@ -223,9 +225,6 @@ Feature importance analysis highlighted **loan_percent_income**, **loan_int_rate
 
 ## 🔗 Project Links
 
-- 📂 [View the full notebook on GitHub](https://github.com/chigozier9/loan-approval-project)
-- 📁 Dataset Source: [Kaggle Loan Prediction Dataset](https://www.kaggle.com/datasets/altruistdelhite04/loan-prediction-problem-dataset)
-
-"""
-
-
+- 📂 [View the code for this page on GitHub](https://github.com/chigozie9/portfolio-site/blob/main/loan-approval.qmd)
+- 📂 [R version of this analysis (logistic regression + k-NN)](https://github.com/chigozie9/loan-approval-model)
+- 📁 Dataset: [Kaggle Playground Series S4E10, Loan Approval Prediction](https://www.kaggle.com/competitions/playground-series-s4e10)

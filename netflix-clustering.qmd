@@ -2,13 +2,12 @@
 title: "Netflix User Segmentation"
 format: html
 page-layout: full
-css: styles/style.css
 ---
 
 # 🎬 Netflix User Segmentation with K-Means Clustering
 
 This project explores how we can segment Netflix-style users based on their viewing and rating behavior.
-We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset — a popular proxy for streaming behavior.
+We use unsupervised learning techniques (K-Means and PCA) to uncover distinct audience groups from the MovieLens 100K dataset, a popular proxy for streaming behavior.
 
 ---
 

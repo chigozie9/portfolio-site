@@ -9,12 +9,26 @@ include-in-header: custom-fonts.html
 :::{#header}
 <div class="hero">
   <h1><span class="highlight">Hello, I'm Andrew.</span></h1>
-  <p>I'm a software engineer and data scientist.</p>
+  <p>QA automation engineer (SDET) and data analyst.</p>
+  <p class="hero-sub">4 years building Python test automation for enterprise apps &middot; M.S. Data Science, Texas Tech</p>
   <a href="#projects-section"><button class="view-projects">View my work ↓</button></a>
 </div>
 :::
 
-:::{#spacer}
+:::{#about-section}
+<h2>About</h2>
+<p>I spent four years at Tata Consultancy Services as an automation engineer, building and maintaining
+Python + Selenium test suites for enterprise web applications, validating REST APIs and databases with
+Postman and SQL, and running automated tests in Jenkins CI pipelines. I also hold a B.S. in Computer Science
+and an M.S. in Data Science, so I'm just as comfortable digging into data with pandas, scikit-learn and
+Power BI as I am chasing down a flaky test.</p>
+
+<div class="skill-groups">
+<div class="skill-group"><h3>Testing &amp; Automation</h3><p>pytest &middot; Selenium WebDriver &middot; REST API testing &middot; Postman &middot; regression testing &middot; Jenkins CI</p></div>
+<div class="skill-group"><h3>Languages</h3><p>Python &middot; SQL &middot; Java &middot; JavaScript / TypeScript &middot; R</p></div>
+<div class="skill-group"><h3>Data</h3><p>pandas &middot; scikit-learn &middot; Plotly &middot; Streamlit &middot; Power BI &middot; Quarto</p></div>
+<div class="skill-group"><h3>Tools</h3><p>Git &middot; GitHub &middot; Docker &middot; JIRA &middot; MongoDB &middot; PostgreSQL &middot; Agile/Scrum</p></div>
+</div>
 :::
 
 :::{#projects-section}
@@ -22,20 +36,32 @@ include-in-header: custom-fonts.html
 :::{.project-container}
 
 :::{.project-card}
+<h2><a href="https://github.com/chigozie9/WareHouse" target="_blank">Warehouse Inventory Manager</a></h2>
+<p>Full-stack app for managing warehouses, inventory and stock transfers, with capacity validation and centralized error handling.</p>
+<p><strong>Tech:</strong> Java, Spring Boot, JPA, PostgreSQL, React, REST APIs</p>
+:::
+
+:::{.project-card}
+<h2><a href="finance-dashboard.qmd">Personal Finance Dashboard</a></h2>
+<p>Interactive web app to import transactions and track income, spending by category and monthly net cash flow.</p>
+<p><strong>Tech:</strong> Python, Streamlit, pandas, Plotly</p>
+:::
+
+:::{.project-card}
 <h2><a href="loan-approval.qmd">Loan Approval Model</a></h2>
-<p>Built a machine learning model to predict loan approvals.</p>
-<p><strong>Tech:</strong> Python, XGBoost, Logistic Regression</p>
+<p>Compared classifiers to predict loan approvals; Random Forest reached 95% accuracy and 92% precision.</p>
+<p><strong>Tech:</strong> Python, scikit-learn, Random Forest, Logistic Regression</p>
 :::
 
 :::{.project-card}
 <h2><a href="netflix-clustering.qmd">Netflix User Segmentation</a></h2>
-<p>Unsupervised clustering of Netflix-style users based on their movie rating behavior.</p>
-<p><strong>Tech:</strong> Python, K-Means, PCA, Scikit-learn</p>
+<p>Unsupervised clustering of streaming users based on their movie rating behavior.</p>
+<p><strong>Tech:</strong> Python, K-Means, PCA, scikit-learn</p>
 :::
 
 :::{.project-card}
 <h2><a href="restaurant-reviews.qmd">Restaurant Review Trends</a></h2>
-<p>Analyzed sentiment and trends in restaurant reviews.</p>
+<p>Scored review sentiment and tracked how ratings and sentiment changed over time.</p>
 <p><strong>Tech:</strong> Python, NLP, TextBlob, WordCloud</p>
 :::
 
@@ -48,6 +74,6 @@ include-in-header: custom-fonts.html
   <a href="https://github.com/chigozie9" target="_blank">GitHub</a> |
   <a href="mailto:andrew1nwalie@gmail.com">Email</a> |
   <a href="https://www.linkedin.com/in/andrew-nwalie-917640185/" target="_blank">LinkedIn</a>
-  <p>© 2025 Andrew Nwalie | Journey Beyond Data</p>
+  <p>© 2026 Andrew Nwalie</p>
 </div>
 :::

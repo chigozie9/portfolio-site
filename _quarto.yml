@@ -2,15 +2,17 @@ project:
   type: website
 
 website:
-  title: "Andrew | Data Portfolio"
+  title: "Andrew Nwalie | Portfolio"
   navbar:
     background: "#2a4066"
     pinned: true
     left:
       - text: "Home"
         href: "index.qmd"
+      - text: "About"
+        href: "index.qmd#about-section"
       - text: "Projects"
-        href: "#projects-section"
+        href: "index.qmd#projects-section"
       - text: "Contact"
         href: "contact.qmd"
   search: false # Disables the search feature
