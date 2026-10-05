@@ -24,7 +24,7 @@ and an M.S. in Data Science, so I'm just as comfortable digging into data with p
 Power BI as I am chasing down a flaky test.</p>
 
 <div class="skill-groups">
-<div class="skill-group"><h3>Testing &amp; Automation</h3><p>pytest &middot; Selenium WebDriver &middot; REST API testing &middot; Postman &middot; regression testing &middot; Jenkins CI</p></div>
+<div class="skill-group"><h3>Testing &amp; Automation</h3><p>pytest &middot; Playwright &middot; Selenium WebDriver &middot; REST API testing &middot; Postman &middot; GitHub Actions &middot; Jenkins CI</p></div>
 <div class="skill-group"><h3>Languages</h3><p>Python &middot; SQL &middot; Java &middot; JavaScript / TypeScript &middot; R</p></div>
 <div class="skill-group"><h3>Data</h3><p>pandas &middot; scikit-learn &middot; Plotly &middot; Streamlit &middot; Power BI &middot; Quarto</p></div>
 <div class="skill-group"><h3>Tools</h3><p>Git &middot; GitHub &middot; Docker &middot; JIRA &middot; MongoDB &middot; PostgreSQL &middot; Agile/Scrum</p></div>
@@ -36,9 +36,9 @@ Power BI as I am chasing down a flaky test.</p>
 :::{.project-container}
 
 :::{.project-card}
-<h2><a href="https://github.com/chigozie9/WareHouse" target="_blank">Warehouse Inventory Manager</a></h2>
-<p>Full-stack app for managing warehouses, inventory and stock transfers, with capacity validation and centralized error handling.</p>
-<p><strong>Tech:</strong> Java, Spring Boot, JPA, PostgreSQL, React, REST APIs</p>
+<h2><a href="warehouse.qmd">Warehouse Manager + Test Suite</a></h2>
+<p>Full-stack inventory app with 66 automated API and UI tests running in CI. The suite found 6 real bugs, which I then fixed.</p>
+<p><strong>Tech:</strong> pytest, Playwright, GitHub Actions, Spring Boot, PostgreSQL, React</p>
 :::
 
 :::{.project-card}
