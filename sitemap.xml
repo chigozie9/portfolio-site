@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://chigozie9.github.io/portfolio-site/restaurant-reviews.html</loc>
-    <lastmod>2026-10-04T23:24:35.248Z</lastmod>
+    <loc>https://chigozie9.github.io/portfolio-site/warehouse.html</loc>
+    <lastmod>2026-10-05T01:55:37.894Z</lastmod>
   </url>
   <url>
-    <loc>https://chigozie9.github.io/portfolio-site/loan-approval.html</loc>
-    <lastmod>2026-10-04T23:24:23.702Z</lastmod>
+    <loc>https://chigozie9.github.io/portfolio-site/netflix-clustering.html</loc>
+    <lastmod>2026-10-04T23:24:35.388Z</lastmod>
   </url>
   <url>
-    <loc>https://chigozie9.github.io/portfolio-site/finance-dashboard.html</loc>
-    <lastmod>2026-10-04T23:24:07.446Z</lastmod>
+    <loc>https://chigozie9.github.io/portfolio-site/index.html</loc>
+    <lastmod>2026-10-05T01:55:48.090Z</lastmod>
   </url>
   <url>
     <loc>https://chigozie9.github.io/portfolio-site/contact.html</loc>
     <lastmod>2026-10-04T23:28:36.739Z</lastmod>
   </url>
   <url>
-    <loc>https://chigozie9.github.io/portfolio-site/index.html</loc>
-    <lastmod>2026-10-04T23:28:36.747Z</lastmod>
+    <loc>https://chigozie9.github.io/portfolio-site/finance-dashboard.html</loc>
+    <lastmod>2026-10-04T23:24:07.446Z</lastmod>
   </url>
   <url>
-    <loc>https://chigozie9.github.io/portfolio-site/netflix-clustering.html</loc>
-    <lastmod>2026-10-04T23:24:35.388Z</lastmod>
+    <loc>https://chigozie9.github.io/portfolio-site/loan-approval.html</loc>
+    <lastmod>2026-10-04T23:24:23.702Z</lastmod>
+  </url>
+  <url>
+    <loc>https://chigozie9.github.io/portfolio-site/restaurant-reviews.html</loc>
+    <lastmod>2026-10-04T23:24:35.248Z</lastmod>
   </url>
 </urlset>

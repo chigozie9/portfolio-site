@@ -1,164 +1,38 @@
 [
   {
-    "objectID": "restaurant-reviews.html",
-    "href": "restaurant-reviews.html",
-    "title": "Restaurant Reviews Dashboard",
+    "objectID": "warehouse.html",
+    "href": "warehouse.html",
+    "title": "Warehouse Inventory Manager",
     "section": "",
-    "text": "This project explores how customer sentiment and review volume evolved over time for various restaurants. We used natural language processing (NLP) to extract sentiment from review text and visualized how it correlated with rating trends.\n\n\n\n\nPandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard\n\n\n\n\n\n\n\n\nRating and Sentiment Over Time\n\n\n\n\n\n\n\n\n\nNumber of Reviews Over Time\n\n\n\n\n\n\nWe visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words\n\n\n\n\n\n\nCheck out the code in the notebook: restaurant_eda.py\n\n\n\n\nThis project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
+    "text": "A full-stack inventory app (Spring Boot, PostgreSQL, React) with an automated API + UI test suite built in pytest and Playwright that runs in GitHub Actions on every push. The suite found 6 real bugs, which I then fixed.\n\n\n\nTests\n\n\n📂 Code: github.com/chigozie9/WareHouse\n\n\n\n\nBackend: Java 17, Spring Boot 3, Spring Data JPA, PostgreSQL, REST APIs\nFrontend: React 19, React Router, Vite\nTesting: Python, pytest, requests, Playwright, pytest-html\nCI: GitHub Actions with a PostgreSQL service container\n\n\n\n\n\nThe app manages warehouses, the stock inside them, and transfers between them, while enforcing capacity limits. Each feature has its own page behind a nav bar.\n\n\n\nDashboard: totals and how full each warehouse is (red at 90%+)\n\n\n\n\n\nInventory: add, edit and delete items; remaining space shown per warehouse\n\n\n\n\n\nTransfers: move stock by SKU, with available quantity and destination space shown\n\n\n\n\n\n\n66 automated tests, all independent: each one creates its own uniquely named data and cleans it up.\nAPI tests (pytest + requests) cover the business logic:\n\nHappy paths for every endpoint: create, read, update, delete, transfer\nCapacity accounting after every change, verified by reading the data back from the API\nBoundary values: filling a warehouse exactly to capacity, quantity 0 vs. -5, shrinking capacity just below current stock\nNegative paths: unknown IDs, wrong warehouse, transfer to the same warehouse, not enough stock or space\nNo partial updates: after a rejected request, the data is checked to be unchanged\nError contract: bad input must return a clear 4xx, never a 500 or a stack trace\n\nUI tests (Playwright) cover what a user does: nav bar routing, dashboard capacity bars, creating, editing and deleting warehouses, managing inventory, running a transfer end to end, form validation, and error banners. Backend failures are simulated with page.route() so error states can be tested without breaking real data.\nCI (GitHub Actions) starts a real PostgreSQL container, builds and runs the backend and frontend, runs the whole suite, and uploads an HTML test report.\n\n\n\n\nI wrote tests for the correct behavior first. Where the app was wrong, I marked the test as an expected failure (xfail, strict mode), so CI stayed green while the bugs were tracked. When I fixed the bugs, strict mode flagged each test as now passing, and they became permanent regression tests.\n\n\n\n\n\n\n\n\nBug\nBefore\nAfter the fix\n\n\n\n\nInvalid input (missing name, negative quantity, transfer of 0)\n500 server error\n400, naming each bad field\n\n\nDuplicate warehouse name\n500, and the UI showed “Unexpected server error”\n409 “A warehouse named X already exists.”\n\n\nMalformed JSON\n500\n400\n\n\nChanging an item’s SKU to one already in the warehouse\nAllowed; later transfers crashed with 500\n409, nothing changed\n\n\nListing items for a warehouse that doesn’t exist\n200 with an empty list\n404\n\n\nEditing an item’s expiration date\nSilently ignored\nSaved\n\n\n\nThe first three shared one root cause: the API’s global error handler had no cases for validation errors, unreadable JSON or database constraint violations, so all of them fell through to the generic 500 handler.\n$ pytest\n..................................................................  [100%]\n66 passed in 6.31s"
   },
   {
-    "objectID": "restaurant-reviews.html#tools-techniques",
-    "href": "restaurant-reviews.html#tools-techniques",
-    "title": "Restaurant Reviews Dashboard",
+    "objectID": "warehouse.html#tech-stack",
+    "href": "warehouse.html#tech-stack",
+    "title": "Warehouse Inventory Manager",
     "section": "",
-    "text": "Pandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard"
+    "text": "Backend: Java 17, Spring Boot 3, Spring Data JPA, PostgreSQL, REST APIs\nFrontend: React 19, React Router, Vite\nTesting: Python, pytest, requests, Playwright, pytest-html\nCI: GitHub Actions with a PostgreSQL service container"
   },
   {
-    "objectID": "restaurant-reviews.html#timeline-of-reviews",
-    "href": "restaurant-reviews.html#timeline-of-reviews",
-    "title": "Restaurant Reviews Dashboard",
+    "objectID": "warehouse.html#the-app",
+    "href": "warehouse.html#the-app",
+    "title": "Warehouse Inventory Manager",
     "section": "",
-    "text": "Rating and Sentiment Over Time"
+    "text": "The app manages warehouses, the stock inside them, and transfers between them, while enforcing capacity limits. Each feature has its own page behind a nav bar.\n\n\n\nDashboard: totals and how full each warehouse is (red at 90%+)\n\n\n\n\n\nInventory: add, edit and delete items; remaining space shown per warehouse\n\n\n\n\n\nTransfers: move stock by SKU, with available quantity and destination space shown"
   },
   {
-    "objectID": "restaurant-reviews.html#sentiment-by-restaurant",
-    "href": "restaurant-reviews.html#sentiment-by-restaurant",
-    "title": "Restaurant Reviews Dashboard",
+    "objectID": "warehouse.html#test-strategy",
+    "href": "warehouse.html#test-strategy",
+    "title": "Warehouse Inventory Manager",
     "section": "",
-    "text": "Number of Reviews Over Time"
+    "text": "66 automated tests, all independent: each one creates its own uniquely named data and cleans it up.\nAPI tests (pytest + requests) cover the business logic:\n\nHappy paths for every endpoint: create, read, update, delete, transfer\nCapacity accounting after every change, verified by reading the data back from the API\nBoundary values: filling a warehouse exactly to capacity, quantity 0 vs. -5, shrinking capacity just below current stock\nNegative paths: unknown IDs, wrong warehouse, transfer to the same warehouse, not enough stock or space\nNo partial updates: after a rejected request, the data is checked to be unchanged\nError contract: bad input must return a clear 4xx, never a 500 or a stack trace\n\nUI tests (Playwright) cover what a user does: nav bar routing, dashboard capacity bars, creating, editing and deleting warehouses, managing inventory, running a transfer end to end, form validation, and error banners. Backend failures are simulated with page.route() so error states can be tested without breaking real data.\nCI (GitHub Actions) starts a real PostgreSQL container, builds and runs the backend and frontend, runs the whole suite, and uploads an HTML test report."
   },
   {
-    "objectID": "restaurant-reviews.html#most-frequent-words-in-reviews",
-    "href": "restaurant-reviews.html#most-frequent-words-in-reviews",
-    "title": "Restaurant Reviews Dashboard",
+    "objectID": "warehouse.html#bugs-found-by-the-suite",
+    "href": "warehouse.html#bugs-found-by-the-suite",
+    "title": "Warehouse Inventory Manager",
     "section": "",
-    "text": "We visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words"
-  },
-  {
-    "objectID": "restaurant-reviews.html#notebook",
-    "href": "restaurant-reviews.html#notebook",
-    "title": "Restaurant Reviews Dashboard",
-    "section": "",
-    "text": "Check out the code in the notebook: restaurant_eda.py"
-  },
-  {
-    "objectID": "restaurant-reviews.html#summary",
-    "href": "restaurant-reviews.html#summary",
-    "title": "Restaurant Reviews Dashboard",
-    "section": "",
-    "text": "This project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
-  },
-  {
-    "objectID": "loan-approval.html",
-    "href": "loan-approval.html",
-    "title": "Loan Approval Prediction",
-    "section": "",
-    "text": "Can we predict whether a loan application will be approved based on applicant information? This project simulates how financial institutions can use data science to improve decision-making in the lending process.\n\n\n\n\nThe dataset (Kaggle Playground Series S4E10) includes:\n\nApplicant age, income and home ownership\nEmployment length\nLoan purpose (intent), grade and amount\nInterest rate and loan-to-income ratio\nCredit history length and prior defaults\nLoan status (approved / not approved), the target\n\nAfter preprocessing, we were left with a clean dataset ready for modeling.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey insights discovered:\n\nDebt consolidation, medical, and home improvement loans had the highest approval rates.\nVenture loans had the lowest approval rate, indicating higher perceived risk.\nApproved applicants tended to have slightly lower median incomes, although the income range overlaps heavily.\nThe income distribution is heavily right-skewed, requiring log scaling for meaningful visualization.\n\nVisuals like histograms, boxplots, and bar charts were used to uncover these patterns.\n\n\n\n\n\n\n\n\n\nAccuracy: 0.91\nPrecision: 0.77\nRecall: 0.54\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe compared two models:\n\nLogistic Regression (baseline)\nRandom Forest\n\nThe Random Forest model delivered the best overall performance.\nFinal Metrics (Random Forest):\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\nFeature importance analysis highlighted loan_percent_income, loan_int_rate, and person_income as the top predictors.\n\n\n\n\n\n\nThe Random Forest model achieved the best performance with strong accuracy and balanced metrics.\nLoan-to-income ratio, interest rate, and income were the top predictors, according to feature importance.\nPrecision (92%) suggests the model reliably predicts approved loans, and recall (72%) shows good coverage of actual approvals.\nTo improve the model:\n\nConsider using external credit data or employment verification APIs\nExplore class imbalance handling (e.g., SMOTE, weighted loss)\nExperiment with gradient boosting models for potential gains\n\n\n\n\n\n\n📂 View the code for this page on GitHub\n📂 R version of this analysis (logistic regression + k-NN)\n📁 Dataset: Kaggle Playground Series S4E10, Loan Approval Prediction"
-  },
-  {
-    "objectID": "loan-approval.html#problem-statement",
-    "href": "loan-approval.html#problem-statement",
-    "title": "Loan Approval Prediction",
-    "section": "",
-    "text": "Can we predict whether a loan application will be approved based on applicant information? This project simulates how financial institutions can use data science to improve decision-making in the lending process."
-  },
-  {
-    "objectID": "loan-approval.html#dataset-overview",
-    "href": "loan-approval.html#dataset-overview",
-    "title": "Loan Approval Prediction",
-    "section": "",
-    "text": "The dataset (Kaggle Playground Series S4E10) includes:\n\nApplicant age, income and home ownership\nEmployment length\nLoan purpose (intent), grade and amount\nInterest rate and loan-to-income ratio\nCredit history length and prior defaults\nLoan status (approved / not approved), the target\n\nAfter preprocessing, we were left with a clean dataset ready for modeling."
-  },
-  {
-    "objectID": "loan-approval.html#exploratory-data-analysis-eda",
-    "href": "loan-approval.html#exploratory-data-analysis-eda",
-    "title": "Loan Approval Prediction",
-    "section": "",
-    "text": "Key insights discovered:\n\nDebt consolidation, medical, and home improvement loans had the highest approval rates.\nVenture loans had the lowest approval rate, indicating higher perceived risk.\nApproved applicants tended to have slightly lower median incomes, although the income range overlaps heavily.\nThe income distribution is heavily right-skewed, requiring log scaling for meaningful visualization.\n\nVisuals like histograms, boxplots, and bar charts were used to uncover these patterns."
-  },
-  {
-    "objectID": "loan-approval.html#model-building",
-    "href": "loan-approval.html#model-building",
-    "title": "Loan Approval Prediction",
-    "section": "",
-    "text": "Accuracy: 0.91\nPrecision: 0.77\nRecall: 0.54\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe compared two models:\n\nLogistic Regression (baseline)\nRandom Forest\n\nThe Random Forest model delivered the best overall performance.\nFinal Metrics (Random Forest):\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\nFeature importance analysis highlighted loan_percent_income, loan_int_rate, and person_income as the top predictors."
-  },
-  {
-    "objectID": "loan-approval.html#results-takeaways",
-    "href": "loan-approval.html#results-takeaways",
-    "title": "Loan Approval Prediction",
-    "section": "",
-    "text": "The Random Forest model achieved the best performance with strong accuracy and balanced metrics.\nLoan-to-income ratio, interest rate, and income were the top predictors, according to feature importance.\nPrecision (92%) suggests the model reliably predicts approved loans, and recall (72%) shows good coverage of actual approvals.\nTo improve the model:\n\nConsider using external credit data or employment verification APIs\nExplore class imbalance handling (e.g., SMOTE, weighted loss)\nExperiment with gradient boosting models for potential gains"
-  },
-  {
-    "objectID": "loan-approval.html#project-links",
-    "href": "loan-approval.html#project-links",
-    "title": "Loan Approval Prediction",
-    "section": "",
-    "text": "📂 View the code for this page on GitHub\n📂 R version of this analysis (logistic regression + k-NN)\n📁 Dataset: Kaggle Playground Series S4E10, Loan Approval Prediction"
-  },
-  {
-    "objectID": "finance-dashboard.html",
-    "href": "finance-dashboard.html",
-    "title": "Personal Finance Dashboard",
-    "section": "",
-    "text": "An interactive web app for tracking income, expenses and spending trends, built with Streamlit, pandas and Plotly.\n\n\n\n\n\n\nDashboard overview\n\n\n\n\n\n\n\nAdd transactions manually from the sidebar, or import them from a CSV file\nRunning balance and monthly net cash flow\nInteractive category breakdown of expenses (pie chart)\nThree views: Overview, Transactions and Insights, plus quick stats\nData persists between sessions in CSV storage\n\n\n\n\n\n\nPython for the app logic\nStreamlit for the UI and interactivity\npandas for data processing\nPlotly for interactive charts\n\n\n\n\n\nSource code and setup instructions: github.com/chigozie9/personal-finance-dashboard"
-  },
-  {
-    "objectID": "finance-dashboard.html#screenshot",
-    "href": "finance-dashboard.html#screenshot",
-    "title": "Personal Finance Dashboard",
-    "section": "",
-    "text": "Dashboard overview"
-  },
-  {
-    "objectID": "finance-dashboard.html#features",
-    "href": "finance-dashboard.html#features",
-    "title": "Personal Finance Dashboard",
-    "section": "",
-    "text": "Add transactions manually from the sidebar, or import them from a CSV file\nRunning balance and monthly net cash flow\nInteractive category breakdown of expenses (pie chart)\nThree views: Overview, Transactions and Insights, plus quick stats\nData persists between sessions in CSV storage"
-  },
-  {
-    "objectID": "finance-dashboard.html#tech-stack",
-    "href": "finance-dashboard.html#tech-stack",
-    "title": "Personal Finance Dashboard",
-    "section": "",
-    "text": "Python for the app logic\nStreamlit for the UI and interactivity\npandas for data processing\nPlotly for interactive charts"
-  },
-  {
-    "objectID": "finance-dashboard.html#code",
-    "href": "finance-dashboard.html#code",
-    "title": "Personal Finance Dashboard",
-    "section": "",
-    "text": "Source code and setup instructions: github.com/chigozie9/personal-finance-dashboard"
-  },
-  {
-    "objectID": "contact.html",
-    "href": "contact.html",
-    "title": "Contact",
-    "section": "",
-    "text": "I’d love to connect, whether you’re hiring, collaborating, or just saying hi!\n\n\n\n\n🌐 GitHub: @chigozie9\n💼 LinkedIn: Andrew Nwalie\n✉️ Email: andrew1nwalie@gmail.com\n\n\n\n\n\n\nRemote full-time roles in QA automation / SDET\nRemote data analyst and analytics roles"
-  },
-  {
-    "objectID": "contact.html#links",
-    "href": "contact.html#links",
-    "title": "Contact",
-    "section": "",
-    "text": "🌐 GitHub: @chigozie9\n💼 LinkedIn: Andrew Nwalie\n✉️ Email: andrew1nwalie@gmail.com"
-  },
-  {
-    "objectID": "contact.html#open-to",
-    "href": "contact.html#open-to",
-    "title": "Contact",
-    "section": "",
-    "text": "Remote full-time roles in QA automation / SDET\nRemote data analyst and analytics roles"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Andrew Nwalie",
-    "section": "",
-    "text": "Hello, I’m Andrew.\n\n\nQA automation engineer (SDET) and data analyst.\n\n\n4 years building Python test automation for enterprise apps · M.S. Data Science, Texas Tech\n\nView my work ↓\n\n\n\n\nAbout\n\n\nI spent four years at Tata Consultancy Services as an automation engineer, building and maintaining Python + Selenium test suites for enterprise web applications, validating REST APIs and databases with Postman and SQL, and running automated tests in Jenkins CI pipelines. I also hold a B.S. in Computer Science and an M.S. in Data Science, so I’m just as comfortable digging into data with pandas, scikit-learn and Power BI as I am chasing down a flaky test.\n\n\n\n\nTesting & Automation\n\n\npytest · Selenium WebDriver · REST API testing · Postman · regression testing · Jenkins CI\n\n\n\n\nLanguages\n\n\nPython · SQL · Java · JavaScript / TypeScript · R\n\n\n\n\nData\n\n\npandas · scikit-learn · Plotly · Streamlit · Power BI · Quarto\n\n\n\n\nTools\n\n\nGit · GitHub · Docker · JIRA · MongoDB · PostgreSQL · Agile/Scrum\n\n\n\n\n\n\nFeatured Projects\n\n\n\n\nWarehouse Inventory Manager\n\n\nFull-stack app for managing warehouses, inventory and stock transfers, with capacity validation and centralized error handling.\n\n\nTech: Java, Spring Boot, JPA, PostgreSQL, React, REST APIs\n\n\n\n\nPersonal Finance Dashboard\n\n\nInteractive web app to import transactions and track income, spending by category and monthly net cash flow.\n\n\nTech: Python, Streamlit, pandas, Plotly\n\n\n\n\nLoan Approval Model\n\n\nCompared classifiers to predict loan approvals; Random Forest reached 95% accuracy and 92% precision.\n\n\nTech: Python, scikit-learn, Random Forest, Logistic Regression\n\n\n\n\nNetflix User Segmentation\n\n\nUnsupervised clustering of streaming users based on their movie rating behavior.\n\n\nTech: Python, K-Means, PCA, scikit-learn\n\n\n\n\nRestaurant Review Trends\n\n\nScored review sentiment and tracked how ratings and sentiment changed over time.\n\n\nTech: Python, NLP, TextBlob, WordCloud\n\n\n\n\n\n\nGitHub | Email | LinkedIn\n\n© 2026 Andrew Nwalie"
+    "text": "I wrote tests for the correct behavior first. Where the app was wrong, I marked the test as an expected failure (xfail, strict mode), so CI stayed green while the bugs were tracked. When I fixed the bugs, strict mode flagged each test as now passing, and they became permanent regression tests.\n\n\n\n\n\n\n\n\nBug\nBefore\nAfter the fix\n\n\n\n\nInvalid input (missing name, negative quantity, transfer of 0)\n500 server error\n400, naming each bad field\n\n\nDuplicate warehouse name\n500, and the UI showed “Unexpected server error”\n409 “A warehouse named X already exists.”\n\n\nMalformed JSON\n500\n400\n\n\nChanging an item’s SKU to one already in the warehouse\nAllowed; later transfers crashed with 500\n409, nothing changed\n\n\nListing items for a warehouse that doesn’t exist\n200 with an empty list\n404\n\n\nEditing an item’s expiration date\nSilently ignored\nSaved\n\n\n\nThe first three shared one root cause: the API’s global error handler had no cases for validation errors, unreadable JSON or database constraint violations, so all of them fell through to the generic 500 handler.\n$ pytest\n..................................................................  [100%]\n66 passed in 6.31s"
   },
   {
     "objectID": "netflix-clustering.html",
@@ -215,5 +89,166 @@
     "title": "Netflix User Segmentation",
     "section": "",
     "text": "This project demonstrates how clustering can uncover meaningful user segments from real viewing data. Streaming platforms can use these insights to improve personalization, understand viewer behavior, and enhance user retention."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Andrew Nwalie",
+    "section": "",
+    "text": "Hello, I’m Andrew.\n\n\nQA automation engineer (SDET) and data analyst.\n\n\n4 years building Python test automation for enterprise apps · M.S. Data Science, Texas Tech\n\nView my work ↓\n\n\n\n\nAbout\n\n\nI spent four years at Tata Consultancy Services as an automation engineer, building and maintaining Python + Selenium test suites for enterprise web applications, validating REST APIs and databases with Postman and SQL, and running automated tests in Jenkins CI pipelines. I also hold a B.S. in Computer Science and an M.S. in Data Science, so I’m just as comfortable digging into data with pandas, scikit-learn and Power BI as I am chasing down a flaky test.\n\n\n\n\nTesting & Automation\n\n\npytest · Playwright · Selenium WebDriver · REST API testing · Postman · GitHub Actions · Jenkins CI\n\n\n\n\nLanguages\n\n\nPython · SQL · Java · JavaScript / TypeScript · R\n\n\n\n\nData\n\n\npandas · scikit-learn · Plotly · Streamlit · Power BI · Quarto\n\n\n\n\nTools\n\n\nGit · GitHub · Docker · JIRA · MongoDB · PostgreSQL · Agile/Scrum\n\n\n\n\n\n\nFeatured Projects\n\n\n\n\nWarehouse Manager + Test Suite\n\n\nFull-stack inventory app with 66 automated API and UI tests running in CI. The suite found 6 real bugs, which I then fixed.\n\n\nTech: pytest, Playwright, GitHub Actions, Spring Boot, PostgreSQL, React\n\n\n\n\nPersonal Finance Dashboard\n\n\nInteractive web app to import transactions and track income, spending by category and monthly net cash flow.\n\n\nTech: Python, Streamlit, pandas, Plotly\n\n\n\n\nLoan Approval Model\n\n\nCompared classifiers to predict loan approvals; Random Forest reached 95% accuracy and 92% precision.\n\n\nTech: Python, scikit-learn, Random Forest, Logistic Regression\n\n\n\n\nNetflix User Segmentation\n\n\nUnsupervised clustering of streaming users based on their movie rating behavior.\n\n\nTech: Python, K-Means, PCA, scikit-learn\n\n\n\n\nRestaurant Review Trends\n\n\nScored review sentiment and tracked how ratings and sentiment changed over time.\n\n\nTech: Python, NLP, TextBlob, WordCloud\n\n\n\n\n\n\nGitHub | Email | LinkedIn\n\n© 2026 Andrew Nwalie"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "I’d love to connect, whether you’re hiring, collaborating, or just saying hi!\n\n\n\n\n🌐 GitHub: @chigozie9\n💼 LinkedIn: Andrew Nwalie\n✉️ Email: andrew1nwalie@gmail.com\n\n\n\n\n\n\nRemote full-time roles in QA automation / SDET\nRemote data analyst and analytics roles"
+  },
+  {
+    "objectID": "contact.html#links",
+    "href": "contact.html#links",
+    "title": "Contact",
+    "section": "",
+    "text": "🌐 GitHub: @chigozie9\n💼 LinkedIn: Andrew Nwalie\n✉️ Email: andrew1nwalie@gmail.com"
+  },
+  {
+    "objectID": "contact.html#open-to",
+    "href": "contact.html#open-to",
+    "title": "Contact",
+    "section": "",
+    "text": "Remote full-time roles in QA automation / SDET\nRemote data analyst and analytics roles"
+  },
+  {
+    "objectID": "finance-dashboard.html",
+    "href": "finance-dashboard.html",
+    "title": "Personal Finance Dashboard",
+    "section": "",
+    "text": "An interactive web app for tracking income, expenses and spending trends, built with Streamlit, pandas and Plotly.\n\n\n\n\n\n\nDashboard overview\n\n\n\n\n\n\n\nAdd transactions manually from the sidebar, or import them from a CSV file\nRunning balance and monthly net cash flow\nInteractive category breakdown of expenses (pie chart)\nThree views: Overview, Transactions and Insights, plus quick stats\nData persists between sessions in CSV storage\n\n\n\n\n\n\nPython for the app logic\nStreamlit for the UI and interactivity\npandas for data processing\nPlotly for interactive charts\n\n\n\n\n\nSource code and setup instructions: github.com/chigozie9/personal-finance-dashboard"
+  },
+  {
+    "objectID": "finance-dashboard.html#screenshot",
+    "href": "finance-dashboard.html#screenshot",
+    "title": "Personal Finance Dashboard",
+    "section": "",
+    "text": "Dashboard overview"
+  },
+  {
+    "objectID": "finance-dashboard.html#features",
+    "href": "finance-dashboard.html#features",
+    "title": "Personal Finance Dashboard",
+    "section": "",
+    "text": "Add transactions manually from the sidebar, or import them from a CSV file\nRunning balance and monthly net cash flow\nInteractive category breakdown of expenses (pie chart)\nThree views: Overview, Transactions and Insights, plus quick stats\nData persists between sessions in CSV storage"
+  },
+  {
+    "objectID": "finance-dashboard.html#tech-stack",
+    "href": "finance-dashboard.html#tech-stack",
+    "title": "Personal Finance Dashboard",
+    "section": "",
+    "text": "Python for the app logic\nStreamlit for the UI and interactivity\npandas for data processing\nPlotly for interactive charts"
+  },
+  {
+    "objectID": "finance-dashboard.html#code",
+    "href": "finance-dashboard.html#code",
+    "title": "Personal Finance Dashboard",
+    "section": "",
+    "text": "Source code and setup instructions: github.com/chigozie9/personal-finance-dashboard"
+  },
+  {
+    "objectID": "loan-approval.html",
+    "href": "loan-approval.html",
+    "title": "Loan Approval Prediction",
+    "section": "",
+    "text": "Can we predict whether a loan application will be approved based on applicant information? This project simulates how financial institutions can use data science to improve decision-making in the lending process.\n\n\n\n\nThe dataset (Kaggle Playground Series S4E10) includes:\n\nApplicant age, income and home ownership\nEmployment length\nLoan purpose (intent), grade and amount\nInterest rate and loan-to-income ratio\nCredit history length and prior defaults\nLoan status (approved / not approved), the target\n\nAfter preprocessing, we were left with a clean dataset ready for modeling.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKey insights discovered:\n\nDebt consolidation, medical, and home improvement loans had the highest approval rates.\nVenture loans had the lowest approval rate, indicating higher perceived risk.\nApproved applicants tended to have slightly lower median incomes, although the income range overlaps heavily.\nThe income distribution is heavily right-skewed, requiring log scaling for meaningful visualization.\n\nVisuals like histograms, boxplots, and bar charts were used to uncover these patterns.\n\n\n\n\n\n\n\n\n\nAccuracy: 0.91\nPrecision: 0.77\nRecall: 0.54\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe compared two models:\n\nLogistic Regression (baseline)\nRandom Forest\n\nThe Random Forest model delivered the best overall performance.\nFinal Metrics (Random Forest):\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\nFeature importance analysis highlighted loan_percent_income, loan_int_rate, and person_income as the top predictors.\n\n\n\n\n\n\nThe Random Forest model achieved the best performance with strong accuracy and balanced metrics.\nLoan-to-income ratio, interest rate, and income were the top predictors, according to feature importance.\nPrecision (92%) suggests the model reliably predicts approved loans, and recall (72%) shows good coverage of actual approvals.\nTo improve the model:\n\nConsider using external credit data or employment verification APIs\nExplore class imbalance handling (e.g., SMOTE, weighted loss)\nExperiment with gradient boosting models for potential gains\n\n\n\n\n\n\n📂 View the code for this page on GitHub\n📂 R version of this analysis (logistic regression + k-NN)\n📁 Dataset: Kaggle Playground Series S4E10, Loan Approval Prediction"
+  },
+  {
+    "objectID": "loan-approval.html#problem-statement",
+    "href": "loan-approval.html#problem-statement",
+    "title": "Loan Approval Prediction",
+    "section": "",
+    "text": "Can we predict whether a loan application will be approved based on applicant information? This project simulates how financial institutions can use data science to improve decision-making in the lending process."
+  },
+  {
+    "objectID": "loan-approval.html#dataset-overview",
+    "href": "loan-approval.html#dataset-overview",
+    "title": "Loan Approval Prediction",
+    "section": "",
+    "text": "The dataset (Kaggle Playground Series S4E10) includes:\n\nApplicant age, income and home ownership\nEmployment length\nLoan purpose (intent), grade and amount\nInterest rate and loan-to-income ratio\nCredit history length and prior defaults\nLoan status (approved / not approved), the target\n\nAfter preprocessing, we were left with a clean dataset ready for modeling."
+  },
+  {
+    "objectID": "loan-approval.html#exploratory-data-analysis-eda",
+    "href": "loan-approval.html#exploratory-data-analysis-eda",
+    "title": "Loan Approval Prediction",
+    "section": "",
+    "text": "Key insights discovered:\n\nDebt consolidation, medical, and home improvement loans had the highest approval rates.\nVenture loans had the lowest approval rate, indicating higher perceived risk.\nApproved applicants tended to have slightly lower median incomes, although the income range overlaps heavily.\nThe income distribution is heavily right-skewed, requiring log scaling for meaningful visualization.\n\nVisuals like histograms, boxplots, and bar charts were used to uncover these patterns."
+  },
+  {
+    "objectID": "loan-approval.html#model-building",
+    "href": "loan-approval.html#model-building",
+    "title": "Loan Approval Prediction",
+    "section": "",
+    "text": "Accuracy: 0.91\nPrecision: 0.77\nRecall: 0.54\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe compared two models:\n\nLogistic Regression (baseline)\nRandom Forest\n\nThe Random Forest model delivered the best overall performance.\nFinal Metrics (Random Forest):\n\nAccuracy: 0.95\nPrecision: 0.92\nRecall: 0.72\n\nFeature importance analysis highlighted loan_percent_income, loan_int_rate, and person_income as the top predictors."
+  },
+  {
+    "objectID": "loan-approval.html#results-takeaways",
+    "href": "loan-approval.html#results-takeaways",
+    "title": "Loan Approval Prediction",
+    "section": "",
+    "text": "The Random Forest model achieved the best performance with strong accuracy and balanced metrics.\nLoan-to-income ratio, interest rate, and income were the top predictors, according to feature importance.\nPrecision (92%) suggests the model reliably predicts approved loans, and recall (72%) shows good coverage of actual approvals.\nTo improve the model:\n\nConsider using external credit data or employment verification APIs\nExplore class imbalance handling (e.g., SMOTE, weighted loss)\nExperiment with gradient boosting models for potential gains"
+  },
+  {
+    "objectID": "loan-approval.html#project-links",
+    "href": "loan-approval.html#project-links",
+    "title": "Loan Approval Prediction",
+    "section": "",
+    "text": "📂 View the code for this page on GitHub\n📂 R version of this analysis (logistic regression + k-NN)\n📁 Dataset: Kaggle Playground Series S4E10, Loan Approval Prediction"
+  },
+  {
+    "objectID": "restaurant-reviews.html",
+    "href": "restaurant-reviews.html",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "This project explores how customer sentiment and review volume evolved over time for various restaurants. We used natural language processing (NLP) to extract sentiment from review text and visualized how it correlated with rating trends.\n\n\n\n\nPandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard\n\n\n\n\n\n\n\n\nRating and Sentiment Over Time\n\n\n\n\n\n\n\n\n\nNumber of Reviews Over Time\n\n\n\n\n\n\nWe visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words\n\n\n\n\n\n\nCheck out the code in the notebook: restaurant_eda.py\n\n\n\n\nThis project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
+  },
+  {
+    "objectID": "restaurant-reviews.html#tools-techniques",
+    "href": "restaurant-reviews.html#tools-techniques",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "Pandas for data cleaning\nTextBlob for sentiment scoring\nMatplotlib for visualizations\nWordCloud for text frequency visualization\nStreamlit (optional) for interactive dashboard"
+  },
+  {
+    "objectID": "restaurant-reviews.html#timeline-of-reviews",
+    "href": "restaurant-reviews.html#timeline-of-reviews",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "Rating and Sentiment Over Time"
+  },
+  {
+    "objectID": "restaurant-reviews.html#sentiment-by-restaurant",
+    "href": "restaurant-reviews.html#sentiment-by-restaurant",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "Number of Reviews Over Time"
+  },
+  {
+    "objectID": "restaurant-reviews.html#most-frequent-words-in-reviews",
+    "href": "restaurant-reviews.html#most-frequent-words-in-reviews",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "We visualized the most commonly used words across all reviews to identify recurring themes in customer feedback.\n\n\n\nMost Frequent Words"
+  },
+  {
+    "objectID": "restaurant-reviews.html#notebook",
+    "href": "restaurant-reviews.html#notebook",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "Check out the code in the notebook: restaurant_eda.py"
+  },
+  {
+    "objectID": "restaurant-reviews.html#summary",
+    "href": "restaurant-reviews.html#summary",
+    "title": "Restaurant Reviews Dashboard",
+    "section": "",
+    "text": "This project shows how customer feedback evolves and how NLP can provide actionable business insights. This type of analysis is useful for marketing, operations, and quality control in customer-facing industries."
   }
 ]

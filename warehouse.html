@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Andrew Nwalie – Andrew Nwalie | Portfolio</title>
+<title>Warehouse Inventory Manager – Andrew Nwalie | Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -50,52 +50,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<style>
-
-  @font-face {
-
-    font-family: 'Orbitron';
-
-    font-style: normal;
-
-    font-weight: 400;
-
-    font-display: swap;
-
-    src: url('https://fonts.gstatic.com/s/orbitron/v31/yMJRMIlzdpvBhQQL_Qq7dY0.woff2') format('woff2');
-
-  }
-
-  @font-face {
-
-    font-family: 'Orbitron';
-
-    font-style: normal;
-
-    font-weight: 500;
-
-    font-display: swap;
-
-    src: url('https://fonts.gstatic.com/s/orbitron/v31/yMJRMIlzdpvBhQQL_Qq7dY0.woff2') format('woff2');
-
-  }
-
-  @font-face {
-
-    font-family: 'Orbitron';
-
-    font-style: normal;
-
-    font-weight: 700;
-
-    font-display: swap;
-
-    src: url('https://fonts.gstatic.com/s/orbitron/v31/yMJRMIlzdpvBhQQL_Qq7dY0.woff2') format('woff2');
-
-  }
-
-</style>
-
 </head><body class="nav-fixed quarto-light">custom-fonts.html
 
 
@@ -119,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -151,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Andrew Nwalie</h1>
+<h1 class="title">Warehouse Inventory Manager</h1>
 </div>
 
 
@@ -168,134 +122,123 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div id="header">
-<div class="hero">
-<h1>
-<span class="highlight">Hello, I’m Andrew.</span>
-</h1>
-<p>
-QA automation engineer (SDET) and data analyst.
-</p>
-<p class="hero-sub">
-4 years building Python test automation for enterprise apps · M.S. Data Science, Texas Tech
-</p>
-<p><a href="#projects-section"><button class="view-projects">View my work ↓</button></a></p>
+<section id="warehouse-inventory-manager-test-automation-suite" class="level1">
+<h1>🏭 Warehouse Inventory Manager + Test Automation Suite</h1>
+<p>A full-stack inventory app (Spring Boot, PostgreSQL, React) with an automated <strong>API + UI test suite</strong> built in <strong>pytest</strong> and <strong>Playwright</strong> that runs in <strong>GitHub Actions</strong> on every push. The suite found <strong>6 real bugs</strong>, which I then fixed.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/chigozie9/WareHouse/actions/workflows/tests.yml"><img src="https://github.com/chigozie9/WareHouse/actions/workflows/tests.yml/badge.svg" class="img-fluid figure-img"></a></p>
+<figcaption>Tests</figcaption>
+</figure>
 </div>
+<p>📂 <strong>Code:</strong> <a href="https://github.com/chigozie9/WareHouse">github.com/chigozie9/WareHouse</a></p>
+<hr>
+<section id="tech-stack" class="level2">
+<h2 class="anchored" data-anchor-id="tech-stack">🧰 Tech Stack</h2>
+<ul>
+<li><strong>Backend:</strong> Java 17, Spring Boot 3, Spring Data JPA, PostgreSQL, REST APIs</li>
+<li><strong>Frontend:</strong> React 19, React Router, Vite</li>
+<li><strong>Testing:</strong> Python, pytest, requests, Playwright, pytest-html</li>
+<li><strong>CI:</strong> GitHub Actions with a PostgreSQL service container</li>
+</ul>
+<hr>
+</section>
+<section id="the-app" class="level2">
+<h2 class="anchored" data-anchor-id="the-app">🖥️ The App</h2>
+<p>The app manages warehouses, the stock inside them, and transfers between them, while enforcing capacity limits. Each feature has its own page behind a nav bar.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/warehouse/dashboard.png" class="img-fluid figure-img"></p>
+<figcaption>Dashboard: totals and how full each warehouse is (red at 90%+)</figcaption>
+</figure>
 </div>
-<div id="about-section">
-<h2 class="anchored">
-About
-</h2>
-<p>
-I spent four years at Tata Consultancy Services as an automation engineer, building and maintaining Python + Selenium test suites for enterprise web applications, validating REST APIs and databases with Postman and SQL, and running automated tests in Jenkins CI pipelines. I also hold a B.S. in Computer Science and an M.S. in Data Science, so I’m just as comfortable digging into data with pandas, scikit-learn and Power BI as I am chasing down a flaky test.
-</p>
-<div class="skill-groups">
-<div class="skill-group">
-<h3 class="anchored">
-Testing &amp; Automation
-</h3>
-<p>
-pytest · Playwright · Selenium WebDriver · REST API testing · Postman · GitHub Actions · Jenkins CI
-</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/warehouse/inventory.png" class="img-fluid figure-img"></p>
+<figcaption>Inventory: add, edit and delete items; remaining space shown per warehouse</figcaption>
+</figure>
 </div>
-<div class="skill-group">
-<h3 class="anchored">
-Languages
-</h3>
-<p>
-Python · SQL · Java · JavaScript / TypeScript · R
-</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="data/warehouse/transfers.png" class="img-fluid figure-img"></p>
+<figcaption>Transfers: move stock by SKU, with available quantity and destination space shown</figcaption>
+</figure>
 </div>
-<div class="skill-group">
-<h3 class="anchored">
-Data
-</h3>
-<p>
-pandas · scikit-learn · Plotly · Streamlit · Power BI · Quarto
-</p>
-</div>
-<div class="skill-group">
-<h3 class="anchored">
-Tools
-</h3>
-<p>
-Git · GitHub · Docker · JIRA · MongoDB · PostgreSQL · Agile/Scrum
-</p>
-</div>
-</div>
-</div>
-<div id="projects-section">
-<h2 class="anchored">
-Featured Projects
-</h2>
-<div class="project-container">
-<div class="project-card">
-<h2 class="anchored">
-<a href="./warehouse.html">Warehouse Manager + Test Suite</a>
-</h2>
-<p>
-Full-stack inventory app with 66 automated API and UI tests running in CI. The suite found 6 real bugs, which I then fixed.
-</p>
-<p>
-<strong>Tech:</strong> pytest, Playwright, GitHub Actions, Spring Boot, PostgreSQL, React
-</p>
-</div>
-<div class="project-card">
-<h2 class="anchored">
-<a href="./finance-dashboard.html">Personal Finance Dashboard</a>
-</h2>
-<p>
-Interactive web app to import transactions and track income, spending by category and monthly net cash flow.
-</p>
-<p>
-<strong>Tech:</strong> Python, Streamlit, pandas, Plotly
-</p>
-</div>
-<div class="project-card">
-<h2 class="anchored">
-<a href="./loan-approval.html">Loan Approval Model</a>
-</h2>
-<p>
-Compared classifiers to predict loan approvals; Random Forest reached 95% accuracy and 92% precision.
-</p>
-<p>
-<strong>Tech:</strong> Python, scikit-learn, Random Forest, Logistic Regression
-</p>
-</div>
-<div class="project-card">
-<h2 class="anchored">
-<a href="./netflix-clustering.html">Netflix User Segmentation</a>
-</h2>
-<p>
-Unsupervised clustering of streaming users based on their movie rating behavior.
-</p>
-<p>
-<strong>Tech:</strong> Python, K-Means, PCA, scikit-learn
-</p>
-</div>
-<div class="project-card">
-<h2 class="anchored">
-<a href="./restaurant-reviews.html">Restaurant Review Trends</a>
-</h2>
-<p>
-Scored review sentiment and tracked how ratings and sentiment changed over time.
-</p>
-<p>
-<strong>Tech:</strong> Python, NLP, TextBlob, WordCloud
-</p>
-</div>
-</div>
-</div>
-<div id="footer">
-<div class="footer-text">
-<a href="https://github.com/chigozie9" target="_blank">GitHub</a> | <a href="mailto:andrew1nwalie@gmail.com">Email</a> | <a href="https://www.linkedin.com/in/andrew-nwalie/" target="_blank">LinkedIn</a>
-<p>
-© 2026 Andrew Nwalie
-</p>
-</div>
-</div>
+<hr>
+</section>
+<section id="test-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="test-strategy">🧪 Test Strategy</h2>
+<p><strong>66 automated tests</strong>, all independent: each one creates its own uniquely named data and cleans it up.</p>
+<p><strong>API tests (pytest + requests)</strong> cover the business logic:</p>
+<ul>
+<li>Happy paths for every endpoint: create, read, update, delete, transfer</li>
+<li><strong>Capacity accounting</strong> after every change, verified by reading the data back from the API</li>
+<li><strong>Boundary values:</strong> filling a warehouse exactly to capacity, quantity 0 vs.&nbsp;-5, shrinking capacity just below current stock</li>
+<li><strong>Negative paths:</strong> unknown IDs, wrong warehouse, transfer to the same warehouse, not enough stock or space</li>
+<li><strong>No partial updates:</strong> after a rejected request, the data is checked to be unchanged</li>
+<li><strong>Error contract:</strong> bad input must return a clear 4xx, never a 500 or a stack trace</li>
+</ul>
+<p><strong>UI tests (Playwright)</strong> cover what a user does: nav bar routing, dashboard capacity bars, creating, editing and deleting warehouses, managing inventory, running a transfer end to end, form validation, and error banners. Backend failures are simulated with <code>page.route()</code> so error states can be tested without breaking real data.</p>
+<p><strong>CI (GitHub Actions)</strong> starts a real PostgreSQL container, builds and runs the backend and frontend, runs the whole suite, and uploads an HTML test report.</p>
+<hr>
+</section>
+<section id="bugs-found-by-the-suite" class="level2">
+<h2 class="anchored" data-anchor-id="bugs-found-by-the-suite">🐞 Bugs Found by the Suite</h2>
+<p>I wrote tests for the <em>correct</em> behavior first. Where the app was wrong, I marked the test as an expected failure (<code>xfail</code>, strict mode), so CI stayed green while the bugs were tracked. When I fixed the bugs, strict mode flagged each test as now passing, and they became permanent regression tests.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Bug</th>
+<th>Before</th>
+<th>After the fix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Invalid input (missing name, negative quantity, transfer of 0)</td>
+<td>500 server error</td>
+<td>400, naming each bad field</td>
+</tr>
+<tr class="even">
+<td>Duplicate warehouse name</td>
+<td>500, and the UI showed “Unexpected server error”</td>
+<td>409 “A warehouse named X already exists.”</td>
+</tr>
+<tr class="odd">
+<td>Malformed JSON</td>
+<td>500</td>
+<td>400</td>
+</tr>
+<tr class="even">
+<td>Changing an item’s SKU to one already in the warehouse</td>
+<td>Allowed; later transfers crashed with 500</td>
+<td>409, nothing changed</td>
+</tr>
+<tr class="odd">
+<td>Listing items for a warehouse that doesn’t exist</td>
+<td>200 with an empty list</td>
+<td>404</td>
+</tr>
+<tr class="even">
+<td>Editing an item’s expiration date</td>
+<td>Silently ignored</td>
+<td>Saved</td>
+</tr>
+</tbody>
+</table>
+<p>The first three shared one root cause: the API’s global error handler had no cases for validation errors, unreadable JSON or database constraint violations, so all of them fell through to the generic 500 handler.</p>
+<pre class="text"><code>$ pytest
+..................................................................  [100%]
+66 passed in 6.31s</code></pre>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
